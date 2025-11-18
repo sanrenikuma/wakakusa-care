@@ -4,92 +4,238 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>サポートセンターわかくさ | wakakusa-care.com</title>
-  <meta name="description" content="大阪市を中心に重度訪問介護・居宅介護・行動援護・移動支援・日中一時支援を提供するサポートセンターわかくさの公式サイト。" />
+  <meta name="description" content="大阪市を中心に重度訪問介護・居宅介護・行動援護・移動支援・日中一時支援を提供するサポートセンターわかくさの公式サイト。求人・ボランティア募集中。" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- OGP -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="サポートセンターわかくさ" />
-  <meta property="og:description" content="地域とともに支える わかくさの介護" />
+  <meta property="og:description" content="地域とともに支える、わかくさの介護。求人・ボランティア募集中。" />
   <meta property="og:url" content="https://wakakusa-care.com/" />
-  <meta property="og:image" content="https://wakakusa-care.com/ogp.jpg" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=1600&auto=format&fit=crop" />
   <meta name="twitter:card" content="summary_large_image" />
+
   <style>
     :root {
       --bg: #ffffff;
-      --fg: #111827; /* gray-900 */
-      --muted: #6b7280; /* gray-500 */
-      --brand: #4CAF50; /* wakakusa green */
-      --brand-600: #43a047;
-      --brand-50: #e8f5e9;
+      --fg: #0f172a; /* slate-900 */
+      --muted: #64748b; /* slate-500 */
+      --brand: #7DA35A; /* wakakusa green */
+      --brand-600: #68924A;
+      --brand-50: #F4FCE3;
+      --accent: #6EE7F9; /* cyan */
+      --accent-2: #F59E0B; /* amber */
       --card: #ffffff;
       --border: #e5e7eb; /* gray-200 */
-      --maxw: 1080px;
-      --radius: 16px;
-      --shadow: 0 10px 30px rgba(0,0,0,.06);
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(2, 6, 23, .08);
+      --maxw: 1120px;
     }
     html, body { height: 100%; }
     body {
       margin: 0;
-      font-family: 'Noto Sans JP', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
       background: var(--bg);
       color: var(--fg);
+      font-family: 'Noto Sans JP', system-ui, -apple-system, Segoe UI, Roboto,
+        'Helvetica Neue', Arial, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN",
+        "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
       line-height: 1.75;
     }
     a { color: var(--brand-600); text-decoration: none; }
     a:hover { text-decoration: underline; }
     .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+    /* Header */
     header {
-      position: sticky; top: 0; z-index: 50;
-      background: rgba(255,255,255,.8); backdrop-filter: saturate(180%) blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: saturate(160%) blur(10px);
+      background: rgba(255,255,255,.85);
       border-bottom: 1px solid var(--border);
     }
     .nav {
-      display: flex; align-items: center; justify-content: space-between;
-      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      gap: 16px;
     }
-    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
     .logo {
-      width: 32px; height: 32px; border-radius: 8px; background: var(--brand);
-      display: grid; place-items: center; color: #fff; font-weight: 800;
-      box-shadow: 0 6px 14px rgba(76,175,80,.25);
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--brand), #9ed284);
+      display: grid;
+      place-items: center;
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(125,163,90,.35);
+      font-weight: 900;
     }
-    .nav a.btn { background: var(--brand); color:#fff; padding: 10px 14px; border-radius: 999px; font-weight: 600; box-shadow: 0 6px 14px rgba(76,175,80,.25); }
+    .nav a.btn {
+      background: var(--brand);
+      color:#fff;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      box-shadow: 0 8px 18px rgba(125,163,90,.35);
+    }
     .nav a.btn:hover { background: var(--brand-600); text-decoration: none; }
+    .menu { display:flex; gap:14px; align-items:center; font-weight:600; }
+    .menu a { color: var(--fg); opacity: .8; }
+    .menu a:hover { opacity: 1; text-decoration:none; }
 
-    .hero { padding: 56px 0 40px; background: linear-gradient(180deg, var(--brand-50), #fff 60%); }
-    .hero h1 { font-size: clamp(28px, 4vw, 40px); line-height: 1.2; margin: 0 0 12px; }
-    .hero p.lead { color: var(--muted); font-size: clamp(16px, 2.2vw, 18px); margin: 0 0 24px; }
-    .cta-wrap { display: flex; flex-wrap: wrap; gap: 12px; }
-    .btn-lg { display: inline-flex; align-items: center; gap: 10px; padding: 14px 18px; border-radius: 12px; background: var(--brand); color:#fff; font-weight: 700; box-shadow: var(--shadow); }
-    .btn-lg:hover { background: var(--brand-600); text-decoration: none; }
-    .btn-ghost { background: #fff; color: var(--brand-600); border: 1px solid var(--border); }
+    /* Hero */
+    .hero { position: relative; isolation:isolate; }
+    .hero-media {
+      position:absolute; inset:0; z-index:-1;
+      background:
+        radial-gradient(60% 40% at 10% 10%, rgba(110,231,249,.25), transparent 60%),
+        radial-gradient(60% 40% at 90% 20%, rgba(245,158,11,.18), transparent 60%),
+        linear-gradient(180deg, var(--brand-50), rgba(255,255,255,0) 55%);
+    }
+    .hero-img {
+      position:absolute; inset:0;
+      background-image: url('https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=1800&auto=format&fit=crop');
+      background-size: cover;
+      background-position:center;
+      filter: saturate(110%) contrast(105%) brightness(0.9);
+      opacity:.25;
+    }
+    .hero-inner { padding: 88px 0 56px; }
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 44px);
+      line-height: 1.15;
+      margin: 0 0 12px;
+    }
+    .hero p.lead {
+      color: var(--muted);
+      font-size: clamp(16px, 2.2vw, 18px);
+      margin: 0 0 22px;
+      max-width: 64ch;
+    }
+    .cta-wrap { display:flex; flex-wrap:wrap; gap:12px; }
+    .btn-lg {
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:14px 18px;
+      border-radius:14px;
+      background: var(--brand);
+      color:#fff;
+      font-weight:800;
+      box-shadow: var(--shadow);
+    }
+    .btn-lg:hover { background: var(--brand-600); text-decoration:none; }
+    .btn-ghost {
+      background:#fff;
+      color: var(--brand-600);
+      border:1px solid var(--border);
+    }
 
-    section { padding: 56px 0; }
-    .section-title { font-size: clamp(22px, 3.2vw, 28px); margin: 0 0 20px; }
+    section { padding: 64px 0; }
+    .section-title {
+      font-size: clamp(22px, 3.2vw, 30px);
+      margin: 0 0 20px;
+    }
     .muted { color: var(--muted); }
 
-    .grid { display: grid; gap: 16px; }
+    .grid { display: grid; gap: 18px; }
     @media (min-width: 768px) {
       .grid-2 { grid-template-columns: repeat(2, 1fr); }
-      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+      .grid-3 { grid-template-columns: repeat(3, 1fr);}
     }
 
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
     .card h3 { margin: 0 0 8px; font-size: 18px; }
 
-    .steps { counter-reset: step; display: grid; gap: 14px; }
-    .step { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 16px 16px 56px; position: relative; box-shadow: var(--shadow); }
-    .step::before { counter-increment: step; content: counter(step); position: absolute; left: 16px; top: 16px; width: 28px; height: 28px; border-radius: 50%; background: var(--brand); color:#fff; display:grid; place-items:center; font-weight: 700; }
+    /* Media cards */
+    .media { position: relative; border-radius: 16px; overflow:hidden; margin-bottom: 10px; }
+    .media img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display:block;
+      filter: saturate(110%) contrast(105%);
+    }
+    .media .badge {
+      position:absolute;
+      left:12px; top:12px;
+      background:#fff;
+      color:#111;
+      border-radius:999px;
+      padding:6px 10px;
+      font-weight:700;
+      font-size:12px;
+      box-shadow: var(--shadow);
+    }
 
-    .contact { display: grid; gap: 16px; }
-    @media (min-width: 768px) { .contact { grid-template-columns: 1fr 1fr; } }
+    /* Steps */
+    .steps { counter-reset: step; display:grid; gap: 14px; }
+    .step {
+      background: var(--card);
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding: 16px 16px 16px 56px;
+      position:relative;
+      box-shadow: var(--shadow);
+    }
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      position:absolute;
+      left:16px; top:16px;
+      width:28px; height:28px;
+      border-radius:50%;
+      background: var(--brand);
+      color:#fff;
+      display:grid;
+      place-items:center;
+      font-weight:800;
+    }
 
-    footer { border-top: 1px solid var(--border); padding: 40px 0; color: var(--muted); font-size: 14px; }
-    .footer-grid { display: grid; gap: 16px; }
-    @media (min-width: 768px) { .footer-grid { grid-template-columns: 2fr 1fr; } }
+    /* Contact + Map */
+    .contact { display:grid; gap:16px; }
+    @media(min-width: 900px){
+      .contact { grid-template-columns: 1.1fr .9fr; }
+    }
+    iframe.map {
+      width:100%;
+      height: 340px;
+      border:0;
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+    }
 
-    /* small helpers */
+    footer {
+      border-top:1px solid var(--border);
+      padding: 40px 0;
+      color: var(--muted);
+      font-size:14px;
+    }
+    .footer-grid { display:grid; gap:16px; }
+    @media(min-width: 768px){
+      .footer-grid { grid-template-columns: 2fr 1fr; }
+    }
+
     .nowrap { white-space: nowrap; }
   </style>
 </head>
@@ -100,7 +246,11 @@
         <div class="logo" aria-hidden="true">W</div>
         <div>サポートセンターわかくさ</div>
       </div>
-      <nav>
+      <nav class="menu" aria-label="メインメニュー">
+        <a href="#services">サービス</a>
+        <a href="#recruit">求人</a>
+        <a href="#volunteer">ボランティア</a>
+        <a href="#access">アクセス</a>
         <a class="btn" href="#contact" aria-label="お問い合わせへ移動">お問い合わせ</a>
       </nav>
     </div>
@@ -108,45 +258,61 @@
 
   <main>
     <!-- Hero -->
-    <section class="hero">
-      <div class="container">
-        <h1>障がいを持つ人と共に生きる</h1>
-        <p class="lead">一人ひとりの「その人らしい暮らし」を大切に。サポートセンターわかくさは、大阪市を中心に重度訪問介護・居宅介護・行動援護などの支援を行っています。</p>
+    <section class="hero" id="top" aria-label="概要">
+      <div class="hero-media"></div>
+      <div class="hero-img" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <h1>ひとりひとりの暮らしを、いっしょに支える。</h1>
+        <p class="lead">
+          サポートセンターわかくさは、大阪市を中心に<strong>重度訪問介護・居宅介護・行動援護・移動支援・日中一時支援</strong>などの支援を行っています。
+          地域とともに、その人らしい生活を大切に。
+        </p>
         <div class="cta-wrap">
-          <a class="btn-lg" href="#contact" aria-label="メールフォームで相談する">
-            <!-- mail icon -->
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" stroke="#fff" stroke-width="2"/><path d="m22 8-9.172 6.878a2 2 0 0 1-2.456 0L1.2 8" stroke="#fff" stroke-width="2"/></svg>
-            ご相談はこちら（メール）
-          </a>
+          <a class="btn-lg" href="#contact" aria-label="メールで相談する">ご相談はこちら（メール）</a>
           <a class="btn-lg btn-ghost" href="https://line.me/R/ti/p/" target="_blank" rel="noopener" aria-label="LINEで相談する">LINEで相談</a>
         </div>
       </div>
     </section>
 
-    <!-- Services -->
+    <!-- Services with imagery -->
     <section id="services">
       <div class="container">
-        <h2 class="section-title">サポートセンターわかくさの主なサービス</h2>
-
+        <h2 class="section-title">主なサービス</h2>
         <div class="grid grid-2">
-          <article class="card" aria-labelledby="svc1">
-            <h3 id="svc1">重度訪問介護</h3>
-            <p>重度の肢体不自由、知的障がい又は精神障がいにより、常時介護を必要とする方のご自宅を訪問します。入浴、排せつ、食事等の介護や、調理、洗濯、掃除等の家事、その他生活全般にわたる援助、ならびに外出時における移動中の介護などを総合的に行います。</p>
+          <article class="card">
+            <div class="media">
+              <img alt="重度訪問介護" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200&auto=format&fit=crop">
+              <span class="badge">重度訪問介護</span>
+            </div>
+            <h3>重度訪問介護</h3>
+            <p>重度の肢体不自由、知的・精神の障がいにより常時介護を必要とする方のご自宅を訪問。入浴・排せつ・食事等の介護、家事、外出時の移動支援まで総合的に行います。</p>
           </article>
 
-          <article class="card" aria-labelledby="svc2">
-            <h3 id="svc2">居宅介護</h3>
-            <p>ご自宅での生活を支援するため、入浴、排せつ、食事等の身体介護や、調理、洗濯、掃除といった家事援助、その他生活全般に関する相談・助言を行います。</p>
+          <article class="card">
+            <div class="media">
+              <img alt="居宅介護" src="https://images.unsplash.com/photo-1518617840859-acd542e13edd?q=80&w=1200&auto=format&fit=crop">
+              <span class="badge">居宅介護</span>
+            </div>
+            <h3>居宅介護</h3>
+            <p>ご自宅での生活を支援。入浴・排せつ・食事等の身体介護、調理・洗濯・掃除などの家事援助、生活全般に関する相談・助言を行います。</p>
           </article>
 
-          <article class="card" aria-labelledby="svc3">
-            <h3 id="svc3">行動援護</h3>
-            <p>知的障がい又は精神障がいにより行動上著しい困難を有する方に対して、行動する際に生じ得る危険を回避するために必要な援護を行います。外出時における移動中の介護、排せつ及び食事等の介護のほか、行動する際に必要な援助を提供します。</p>
+          <article class="card">
+            <div class="media">
+              <img alt="行動援護" src="https://images.unsplash.com/photo-1520975922327-8b456906c813?q=80&w=1200&auto=format&fit=crop">
+              <span class="badge">行動援護</span>
+            </div>
+            <h3>行動援護</h3>
+            <p>知的・精神の障がいにより行動上の著しい困難がある方に、危険回避や移動中の介護、排せつ・食事等の介護など、外出場面も含め必要な援護を提供します。</p>
           </article>
 
-          <article class="card" aria-labelledby="svc4">
-            <h3 id="svc4">移動支援</h3>
-            <p>障がいにより円滑な外出が困難な方々に対し、外出の支援を行います。余暇活動等社会参加のための外出や、社会生活上必要不可欠な外出の際に、移動の安全を確保するためのサポートを提供します。</p>
+          <article class="card">
+            <div class="media">
+              <img alt="移動支援" src="https://images.unsplash.com/photo-1533114499-58fa5f5f4a5f?q=80&w=1200&auto=format&fit=crop">
+              <span class="badge">移動支援</span>
+            </div>
+            <h3>移動支援</h3>
+            <p>余暇活動や通院・各種手続きなど、社会参加や日常生活上必要な外出の際に、安全な移動をサポートします。</p>
           </article>
         </div>
       </div>
@@ -159,7 +325,7 @@
         <div class="steps">
           <div class="step">
             <h3>相談・お問い合わせ</h3>
-            <p>ご本人またはご家族、相談支援専門員からお気軽にご連絡ください。</p>
+            <p>ご本人・ご家族・相談支援専門員からお気軽にご連絡ください。</p>
           </div>
           <div class="step">
             <h3>面談・アセスメント</h3>
@@ -173,17 +339,91 @@
       </div>
     </section>
 
-    <!-- Staff Message -->
-    <section id="team">
+    <!-- Recruit -->
+    <section id="recruit">
       <div class="container">
-        <h2 class="section-title">スタッフ紹介</h2>
-        <div class="card">
-          <p><strong>安心して笑顔で過ごせる時間を増やしたい。</strong><br>その想いで、一人ひとりに寄り添った支援を心がけています。若手からベテランまで、多様なスタッフが活躍しています。</p>
+        <h2 class="section-title">求人情報</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>ホームヘルパー（重度訪問介護・居宅介護）</h3>
+            <ul>
+              <li>雇用形態：正社員／パート</li>
+              <li>勤務地：大阪市（住之江・浪速・西成 など）</li>
+              <li>資格：介護職員初任者研修以上（未経験可／資格取得支援あり）</li>
+              <li>勤務時間：シフト制（応相談）</li>
+              <li>待遇：社保完備・交通費支給・研修制度</li>
+            </ul>
+            <div class="cta-wrap">
+              <a class="btn-lg" href="mailto:wakakusa2002@gmail.com?subject=%E6%B1%82%E4%BA%BA%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">メールで応募・問い合わせ</a>
+              <a class="btn-lg btn-ghost" href="tel:0666811211">電話で相談</a>
+            </div>
+          </div>
+          <div class="card">
+            <h3>こんな方を歓迎します</h3>
+            <p>
+              ・人の暮らしに寄り添う支援に関心がある／学びながら成長したい<br>
+              ・チームで協力し、丁寧なコミュニケーションができる<br>
+              ・地域福祉やインクルーシブな社会づくりに興味がある
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Company -->
+    <!-- Volunteer -->
+    <section id="volunteer">
+      <div class="container">
+        <h2 class="section-title">ボランティア募集</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>イベント・外出支援のサポート</h3>
+            <p>季節行事（BBQ・クリスマスなど）や、外出時の見守り・移動サポートをお願いします。単発の参加も歓迎です。</p>
+            <div class="cta-wrap">
+              <a class="btn-lg" href="mailto:wakakusa2002@gmail.com?subject=%E3%83%9C%E3%83%A9%E3%83%B3%E3%83%86%E3%82%A3%E3%82%A2%E7%94%B3%E8%BE%BC">参加を相談する（メール）</a>
+              <a class="btn-lg btn-ghost" href="https://line.me/R/ti/p/" target="_blank" rel="noopener">LINEで相談</a>
+            </div>
+          </div>
+          <div class="card">
+            <h3>参加条件・時間</h3>
+            <ul>
+              <li>対象：高校生以上（未成年は保護者同意）</li>
+              <li>頻度：月1回〜（応相談）</li>
+              <li>場所：大阪市内（住之江・浪速・西成 など）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Access & Contact -->
+    <section id="access">
+      <div class="container">
+        <h2 class="section-title">アクセス</h2>
+        <div class="contact">
+          <div class="card">
+            <p><strong>所在地：</strong>大阪市住之江区御崎5-14-11 クレセントマンションB108</p>
+            <p>
+              <strong>電話：</strong>
+              <a class="nowrap" href="tel:0666811211">06-6681-1211</a>
+              　<strong>FAX：</strong>06-6681-1246
+            </p>
+            <p><strong>メール：</strong><a href="mailto:wakakusa2002@gmail.com">wakakusa2002@gmail.com</a></p>
+            <p class="muted">受付時間：平日 10:00〜17:00</p>
+          </div>
+          <div>
+            <iframe
+              class="map"
+              title="Google Map"
+              loading="lazy"
+              allowfullscreen
+              src="https://www.google.com/maps?q=%E5%A4%A7%E9%98%AA%E5%B8%82%E4%BD%8F%E4%B9%8B%E6%B1%9F%E5%8C%BA%E5%BE%A1%E5%B4%8E5-14-11%20B108&output=embed">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Company -->
     <section id="about">
       <div class="container">
         <h2 class="section-title">法人概要</h2>
@@ -191,16 +431,15 @@
           <div class="card">
             <p><strong>法人名：</strong>株式会社わかくさ</p>
             <p><strong>事業所名：</strong>サポートセンターわかくさ</p>
-            <p><strong>所在地：</strong>大阪市住之江区御崎5-14-11 クレセントマンションB108</p>
             <p><strong>事業内容：</strong>障がい福祉サービス（重度訪問介護・居宅介護・行動援護・移動支援・日中一時支援）</p>
-            <p><strong>電話番号：</strong><a class="nowrap" href="tel:0666811211">06-6681-1211</a></p>
-            <p><strong>FAX番号：</strong>06-6681-1246</p>
-            <p><strong>メール：</strong><a href="mailto:wakakusa2002@gmail.com">wakakusa2002@gmail.com</a></p>
             <p><strong>開設：</strong>2002年</p>
           </div>
           <div class="card">
-            <p class="muted">※ 上記の電話・メールの受付時間は平日 10:00〜17:00 です。</p>
-            <p>アクセスや詳しい情報はお気軽にお問い合わせください。</p>
+            <p class="muted">採用・ボランティア・見学のご相談はお気軽にご連絡ください。</p>
+            <div class="cta-wrap">
+              <a class="btn-lg" href="#contact">お問い合わせ</a>
+              <a class="btn-lg btn-ghost" href="mailto:wakakusa2002@gmail.com">メールを送る</a>
+            </div>
           </div>
         </div>
       </div>
@@ -210,19 +449,24 @@
     <section id="contact">
       <div class="container">
         <h2 class="section-title">お問い合わせ</h2>
-        <div class="contact">
+        <div class="grid grid-2">
           <div class="card">
             <h3>お電話でのお問い合わせ</h3>
-            <p><a class="nowrap" href="tel:0666811211">06-6681-1211</a><br><small class="muted">（受付時間：平日 10:00〜17:00）</small></p>
+            <p>
+              <a class="nowrap" href="tel:0666811211">06-6681-1211</a><br>
+              <small class="muted">（受付：平日 10:00〜17:00）</small>
+            </p>
             <h3>FAXでのお問い合わせ</h3>
             <p>06-6681-1246</p>
             <h3>メールでのお問い合わせ</h3>
-            <p><a href="mailto:wakakusa2002@gmail.com">wakakusa2002@gmail.com</a><br><small class="muted">※確認にお時間をいただく場合がございます。</small></p>
+            <p>
+              <a href="mailto:wakakusa2002@gmail.com">wakakusa2002@gmail.com</a><br>
+              <small class="muted">※ご返信にお時間をいただく場合があります。</small>
+            </p>
           </div>
           <div class="card">
-            <h3>メールフォーム（簡易）</h3>
-            <!-- 簡易フォーム：Vercel では外部フォームサービス連携を推奨。ここでは mailto を暫定運用 -->
-            <p>フォーム送信は準備中です。まずはメール・お電話・LINEでご連絡ください。</p>
+            <h3>メールフォーム（準備中）</h3>
+            <p>現在、外部フォームサービスと連携準備中です。お急ぎの方はメール・お電話・LINEをご利用ください。</p>
             <div class="cta-wrap">
               <a class="btn-lg" href="mailto:wakakusa2002@gmail.com">メールで連絡</a>
               <a class="btn-lg btn-ghost" href="https://line.me/R/ti/p/" target="_blank" rel="noopener">LINEで相談</a>
@@ -246,7 +490,6 @@
   </footer>
 
   <script>
-    // 現在年表記
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 
