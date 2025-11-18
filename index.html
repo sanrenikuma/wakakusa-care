@@ -517,13 +517,23 @@ section {
 #services .badge {
   position: absolute;
   left: 16px;
-  bottom: 16px;
+  top: 16px;          /* 左上に配置（bottom ではなく top） */
+  bottom: auto;
   padding: 4px 12px;
   border-radius: 999px;
   background: rgba(15, 23, 42, 0.86);
   color: #f9fafb;
   font-size: 0.8rem;
   font-weight: 600;
+
+  /* ここからが “おかしな縦長” を直すための上書き */
+  height: auto;
+  line-height: 1.4;
+  display: inline-flex;
+  align-items: center;
+  writing-mode: horizontal-tb;  /* 縦書きになっていた場合に強制的に横書きに戻す */
+}
+
 }
 
 /* タイトル & 本文 */
