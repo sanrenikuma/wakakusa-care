@@ -18,6 +18,133 @@
   <meta property="og:url" content="https://wakakusa-care.com/" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=1600&auto=format&fit=crop" />
   <meta name="twitter:card" content="summary_large_image" />
+/* Recruit & Volunteer */
+.recruit-section {
+  padding: 4rem 0;
+  background: #f8fafc;
+}
+
+.recruit-lead {
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  font-size: 0.98rem;
+  line-height: 1.9;
+  color: #475569;
+}
+
+.recruit-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 900px) {
+  .recruit-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.recruit-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 1.75rem 1.75rem 2rem;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.recruit-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #ecfdf5;
+  color: #15803d;
+  margin-bottom: 0.5rem;
+}
+
+.recruit-card h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.recruit-meta {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.recruit-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.recruit-table th,
+.recruit-table td {
+  padding: 0.4rem 0.3rem;
+  vertical-align: top;
+}
+
+.recruit-table th {
+  width: 28%;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.recruit-table tr + tr th,
+.recruit-table tr + tr td {
+  border-top: 1px solid #e2e8f0;
+}
+
+.recruit-cta {
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.recruit-cta a.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+  background: #16a34a;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+.recruit-cta a.button:hover {
+  background: #15803d;
+}
+
+.volunteer-box {
+  margin-top: 3rem;
+  padding: 1.75rem;
+  border-radius: 24px;
+  background: #ecfeff;
+  border: 1px solid #bae6fd;
+}
+
+.volunteer-box h3 {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.volunteer-box ul {
+  padding-left: 1.1rem;
+  margin: 0.6rem 0 0.6rem;
+  font-size: 0.9rem;
+}
+
+.volunteer-box li + li {
+  margin-top: 0.15rem;
+}
 
   <style>
     :root {
@@ -323,6 +450,149 @@
     <!-- Flow -->
     <section id="flow">
       <div class="container">
+        <section id="recruit" class="recruit-section">
+  <div class="container">
+    <h2 class="section-title">採用情報</h2>
+    <p class="recruit-lead">
+      サポートセンターわかくさでは、障がいのある方の暮らしを一緒に支えてくださる仲間を募集しています。
+      経験の有無にかかわらず、「人の役に立ちたい」「地域で誰かの力になりたい」という想いを大切にしています。
+    </p>
+
+    <div class="recruit-grid">
+      <!-- 正社員 -->
+      <article class="recruit-card">
+        <div>
+          <span class="recruit-tag">正社員</span>
+          <h3>訪問介護スタッフ（重度訪問介護・居宅介護 等）</h3>
+          <p class="recruit-meta">
+            重度訪問介護・居宅介護・行動援護・移動支援など、利用者さまの暮らしに寄り添う訪問支援のお仕事です。
+          </p>
+        </div>
+
+        <table class="recruit-table">
+          <tr>
+            <th>勤務地</th>
+            <td>サポートセンターわかくさ（大阪市住之江区御崎5-14-11 クレセントマンションB108）を拠点に、大阪市内の利用者さま宅への訪問</td>
+          </tr>
+          <tr>
+            <th>仕事内容</th>
+            <td>
+              入浴・排せつ・食事などの身体介護、調理・洗濯・掃除などの家事援助、外出・通院の付き添い など<br>
+              ※担当するサービスは、ご本人の希望や経験に応じて相談のうえ決定します。
+            </td>
+          </tr>
+          <tr>
+            <th>応募資格</th>
+            <td>
+              介護職員初任者研修（旧ヘルパー2級）以上をお持ちの方歓迎<br>
+              障がい福祉分野での実務経験がある方優遇<br>
+              ※未経験の方・ブランクのある方もお気軽にご相談ください。
+            </td>
+          </tr>
+          <tr>
+            <th>勤務時間</th>
+            <td>シフト制（例：9:00〜18:00 など）。夜間帯を含む重度訪問介護の勤務も応相談。</td>
+          </tr>
+          <tr>
+            <th>休日・休暇</th>
+            <td>シフトによる週休2日制／有給休暇／その他 休暇制度あり</td>
+          </tr>
+          <tr>
+            <th>給与</th>
+            <td>
+              月給例：◯◯万円〜（経験・資格等を考慮のうえ決定）<br>
+              資格手当・処遇改善手当 など別途支給あり<br>
+              ※具体的な金額は面談時にご説明いたします。
+            </td>
+          </tr>
+          <tr>
+            <th>待遇・福利厚生</th>
+            <td>
+              各種社会保険完備／交通費支給（規定あり）／昇給・賞与あり（業績による）／
+              研修・資格取得支援制度　など
+            </td>
+          </tr>
+        </table>
+
+        <div class="recruit-cta">
+          ご興味のある方は、お気軽にお電話またはお問い合わせフォームからご連絡ください。<br>
+          <a href="#contact" class="button">正社員求人について問い合わせる</a>
+        </div>
+      </article>
+
+      <!-- パート・アルバイト -->
+      <article class="recruit-card">
+        <div>
+          <span class="recruit-tag">パート・アルバイト</span>
+          <h3>訪問介護スタッフ（登録ヘルパー）</h3>
+          <p class="recruit-meta">
+            ライフスタイルに合わせて働ける登録ヘルパーさんを募集しています。週1回・短時間からの勤務もご相談ください。
+          </p>
+        </div>
+
+        <table class="recruit-table">
+          <tr>
+            <th>勤務形態</th>
+            <td>週1日・1コマから勤務時間・曜日の相談OK／ダブルワーク・扶養内勤務も歓迎</td>
+          </tr>
+          <tr>
+            <th>仕事内容</th>
+            <td>
+              身体介護・家事援助・移動支援などの訪問介護業務全般<br>
+              慣れるまでは経験のあるスタッフが同行し、安心してお仕事に慣れていただけるようサポートします。
+            </td>
+          </tr>
+          <tr>
+            <th>応募資格</th>
+            <td>
+              介護職員初任者研修（旧ヘルパー2級）以上をお持ちの方歓迎<br>
+              学生・主婦（夫）・Wワークの方も歓迎します。
+            </td>
+          </tr>
+          <tr>
+            <th>給与</th>
+            <td>
+              時給例：◯◯◯◯円〜（サービス種別・時間帯により変動）<br>
+              早朝・夜間・深夜手当／処遇改善手当 など別途支給あり
+            </td>
+          </tr>
+          <tr>
+            <th>待遇</th>
+            <td>
+              交通費支給（規定あり）／各種手当あり／研修・ミーティングあり／
+              資格取得支援制度　など
+            </td>
+          </tr>
+        </table>
+
+        <div class="recruit-cta">
+          「少しだけ働いてみたい」「まずは話だけ聞いてみたい」という方も歓迎です。<br>
+          <a href="#contact" class="button">パート・登録ヘルパーについて問い合わせる</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- ボランティア募集 -->
+    <div class="volunteer-box">
+      <h3>ボランティアスタッフ募集</h3>
+      <p>
+        利用者さまとのお出かけや行事、サークル活動などをお手伝いいただけるボランティアさんも募集中です。
+        介護の資格や経験は問いません。「人と関わることが好き」「地域に役立つことをしてみたい」という方を歓迎します。
+      </p>
+      <ul>
+        <li>活動内容の例：外出時の付き添い、行事の準備や片付け、レクリエーションのお手伝い など</li>
+        <li>活動日時：平日・土日いずれも相談のうえ決定（単発参加もOK）</li>
+        <li>対象：高校生以上の方（18歳未満の方は保護者の同意をお願いする場合があります）</li>
+      </ul>
+      <p class="recruit-cta">
+        詳細はお問い合わせの際にご説明いたします。ご興味のある方は、お気軽にご連絡ください。<br>
+        <a href="#contact" class="button">ボランティアについて問い合わせる</a>
+      </p>
+    </div>
+
+  </div>
+</section>
+
         <h2 class="section-title">ご利用の流れ</h2>
         <div class="steps">
           <div class="step">
