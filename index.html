@@ -37,29 +37,35 @@
       --shadow: 0 10px 30px rgba(2, 6, 23, .08);
       --maxw: 1120px;
     }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--fg);
-      font-family: 'Noto Sans JP', system-ui, -apple-system, Segoe UI, Roboto,
-        'Helvetica Neue', Arial, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN",
-        "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
-      line-height: 1.75;
-    }
-    a { color: var(--brand-600); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+   html, body { height: 100%; }
+body {
+  margin: 0;
+  padding-top: 80px;  /* ★ ここを追加：ヘッダーの高さぶん下げる */
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Noto Sans JP', system-ui, -apple-system, Segoe UI, Roboto,
+    'Helvetica Neue', Arial, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN",
+    "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
+  line-height: 1.75;
+}
+a { color: var(--brand-600); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
 
     /* Header */
-    header {
-  position: sticky;
+header {
+  position: fixed;
   top: 0;
-  z-index: 50;
-  background: rgba(248, 250, 252, 0.95); /* うっすら白背景 */
-  backdrop-filter: blur(10px);           /* 下の画像が少しボケる */
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(248, 250, 252, 0.95);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(226, 232, 240, 0.8);
 }
+
+
 section {
   scroll-margin-top: 96px; /* 固定ヘッダーの高さぶんずらすイメージ */
 }
