@@ -561,6 +561,79 @@ section {
   width: 100%;
   display: block;
 }
+/*------------------------------------
+  全体の余白・見出し・画像などの統一デザイン調整
+------------------------------------*/
+
+/* セクションの上下余白を統一 */
+section {
+  padding: 80px 0;
+}
+
+/* 見出し（h2）を統一スタイルに */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.section-title::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: var(--brand-600);
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 4px;
+}
+
+/* h3 デザイン統一 */
+h3 {
+  margin: 20px 0 12px;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* 全画像の角丸と影を統一 */
+.card img,
+.recruit-visual img,
+.volunteer-visual img {
+  border-radius: 18px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+/* セクション間のコンテナ余白補強 */
+.container > p,
+.container > div,
+.container > table {
+  margin-bottom: 32px;
+}
+
+/* スマホ最適化 */
+@media (max-width: 768px) {
+
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 32px;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .recruit-card,
+  .volunteer-box {
+    margin-bottom: 48px;
+  }
+}
 
 
   </style>
