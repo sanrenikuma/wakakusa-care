@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="ja">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,7 +17,8 @@
   <meta property="og:title" content="サポートセンターわかくさ" />
   <meta property="og:description" content="地域とともに支える、わかくさの介護。求人・ボランティア募集中。" />
   <meta property="og:url" content="https://wakakusa-care.com/" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=1600&auto=format&fit=crop" />
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=1600&auto=format&fit=crop" />
   <meta name="twitter:card" content="summary_large_image" />
 
 
@@ -24,51 +26,77 @@
   <style>
     :root {
       --bg: #ffffff;
-      --fg: #0f172a; /* slate-900 */
-      --muted: #64748b; /* slate-500 */
-      --brand: #7DA35A; /* wakakusa green */
+      --fg: #0f172a;
+      /* slate-900 */
+      --muted: #64748b;
+      /* slate-500 */
+      --brand: #7DA35A;
+      /* wakakusa green */
       --brand-600: #68924A;
       --brand-50: #F4FCE3;
-      --accent: #6EE7F9; /* cyan */
-      --accent-2: #F59E0B; /* amber */
+      --accent: #6EE7F9;
+      /* cyan */
+      --accent-2: #F59E0B;
+      /* amber */
       --card: #ffffff;
-      --border: #e5e7eb; /* gray-200 */
+      --border: #e5e7eb;
+      /* gray-200 */
       --radius: 18px;
       --shadow: 0 10px 30px rgba(2, 6, 23, .08);
       --maxw: 1120px;
     }
-   html, body { height: 100%; }
-body {
-  margin: 0;
-  padding-top: 80px;  /* ★ ここを追加：ヘッダーの高さぶん下げる */
-  background: var(--bg);
-  color: var(--fg);
-  font-family: 'Noto Sans JP', system-ui, -apple-system, Segoe UI, Roboto,
-    'Helvetica Neue', Arial, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN",
-    "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
-  line-height: 1.75;
-}
-a { color: var(--brand-600); text-decoration: none; }
-a:hover { text-decoration: underline; }
-.container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding-top: 80px;
+      /* ★ ここを追加：ヘッダーの高さぶん下げる */
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'Noto Sans JP', system-ui, -apple-system, Segoe UI, Roboto,
+        'Helvetica Neue', Arial, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN",
+        "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--brand-600);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
 
     /* Header */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  background: rgba(248, 250, 252, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
-}
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(248, 250, 252, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    }
 
 
-section {
-  scroll-margin-top: 96px; /* 固定ヘッダーの高さぶんずらすイメージ */
-}
+    section {
+      scroll-margin-top: 96px;
+      /* 固定ヘッダーの高さぶんずらすイメージ */
+    }
 
     .nav {
       display: flex;
@@ -77,6 +105,7 @@ section {
       height: 68px;
       gap: 16px;
     }
+
     .brand {
       display: flex;
       align-items: center;
@@ -84,6 +113,7 @@ section {
       font-weight: 800;
       letter-spacing: .5px;
     }
+
     .logo {
       width: 36px;
       height: 36px;
@@ -92,83 +122,140 @@ section {
       display: grid;
       place-items: center;
       color: #fff;
-      box-shadow: 0 8px 18px rgba(125,163,90,.35);
+      box-shadow: 0 8px 18px rgba(125, 163, 90, .35);
       font-weight: 900;
     }
+
     .nav a.btn {
       background: var(--brand);
-      color:#fff;
+      color: #fff;
       padding: 10px 14px;
       border-radius: 999px;
       font-weight: 700;
-      box-shadow: 0 8px 18px rgba(125,163,90,.35);
+      box-shadow: 0 8px 18px rgba(125, 163, 90, .35);
     }
-    .nav a.btn:hover { background: var(--brand-600); text-decoration: none; }
-    .menu { display:flex; gap:14px; align-items:center; font-weight:600; }
-    .menu a { color: var(--fg); opacity: .8; }
-    .menu a:hover { opacity: 1; text-decoration:none; }
+
+    .nav a.btn:hover {
+      background: var(--brand-600);
+      text-decoration: none;
+    }
+
+    .menu {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    .menu a {
+      color: var(--fg);
+      opacity: .8;
+    }
+
+    .menu a:hover {
+      opacity: 1;
+      text-decoration: none;
+    }
 
     /* Hero */
-    .hero { position: relative; isolation:isolate; }
-    .hero-media {
-      position:absolute; inset:0; z-index:-1;
-      background:
-        radial-gradient(60% 40% at 10% 10%, rgba(110,231,249,.25), transparent 60%),
-        radial-gradient(60% 40% at 90% 20%, rgba(245,158,11,.18), transparent 60%),
-        linear-gradient(180deg, var(--brand-50), rgba(255,255,255,0) 55%);
+    .hero {
+      position: relative;
+      isolation: isolate;
     }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(60% 40% at 10% 10%, rgba(110, 231, 249, .25), transparent 60%),
+        radial-gradient(60% 40% at 90% 20%, rgba(245, 158, 11, .18), transparent 60%),
+        linear-gradient(180deg, var(--brand-50), rgba(255, 255, 255, 0) 55%);
+    }
+
     .hero-img {
-      position:absolute; inset:0;
+      position: absolute;
+      inset: 0;
       background-image: url('hero.jpg');
       background-size: cover;
       background-position: center 30%;
       filter: saturate(110%) contrast(104%) brightness(1.05);
       opacity: .22;
-}
+    }
 
 
-    .hero-inner { padding: 88px 0 56px; }
+    .hero-inner {
+      padding: 88px 0 56px;
+    }
+
     .hero h1 {
       font-size: clamp(28px, 5vw, 44px);
       line-height: 1.15;
       margin: 0 0 12px;
     }
+
     .hero p.lead {
       color: var(--muted);
       font-size: clamp(16px, 2.2vw, 18px);
       margin: 0 0 22px;
       max-width: 64ch;
     }
-    .cta-wrap { display:flex; flex-wrap:wrap; gap:12px; }
-    .btn-lg {
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:14px 18px;
-      border-radius:14px;
-      background: var(--brand);
-      color:#fff;
-      font-weight:800;
-      box-shadow: var(--shadow);
-    }
-    .btn-lg:hover { background: var(--brand-600); text-decoration:none; }
-    .btn-ghost {
-      background:#fff;
-      color: var(--brand-600);
-      border:1px solid var(--border);
+
+    .cta-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
-    section { padding: 64px 0; }
+    .btn-lg {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 18px;
+      border-radius: 14px;
+      background: var(--brand);
+      color: #fff;
+      font-weight: 800;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-lg:hover {
+      background: var(--brand-600);
+      text-decoration: none;
+    }
+
+    .btn-ghost {
+      background: #fff;
+      color: var(--brand-600);
+      border: 1px solid var(--border);
+    }
+
+    section {
+      padding: 64px 0;
+    }
+
     .section-title {
       font-size: clamp(22px, 3.2vw, 30px);
       margin: 0 0 20px;
     }
-    .muted { color: var(--muted); }
 
-    .grid { display: grid; gap: 18px; }
+    .muted {
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
     @media (min-width: 768px) {
-      .grid-2 { grid-template-columns: repeat(2, 1fr); }
-      .grid-3 { grid-template-columns: repeat(3, 1fr);}
+      .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     .card {
@@ -179,520 +266,654 @@ section {
       box-shadow: var(--shadow);
       overflow: hidden;
     }
-    .card h3 { margin: 0 0 8px; font-size: 18px; }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
 
     /* Media cards */
-    .media { position: relative; border-radius: 16px; overflow:hidden; margin-bottom: 10px; }
+    .media {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
     .media img {
       width: 100%;
       height: 220px;
       object-fit: cover;
-      display:block;
+      display: block;
       filter: saturate(110%) contrast(105%);
     }
+
     .media .badge {
-      position:absolute;
-      left:12px; top:12px;
-      background:#fff;
-      color:#111;
-      border-radius:999px;
-      padding:6px 10px;
-      font-weight:700;
-      font-size:12px;
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      background: #fff;
+      color: #111;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-weight: 700;
+      font-size: 12px;
       box-shadow: var(--shadow);
     }
 
     /* Steps */
-    .steps { counter-reset: step; display:grid; gap: 14px; }
+    .steps {
+      counter-reset: step;
+      display: grid;
+      gap: 14px;
+    }
+
     .step {
       background: var(--card);
-      border:1px solid var(--border);
-      border-radius:12px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
       padding: 16px 16px 16px 56px;
-      position:relative;
+      position: relative;
       box-shadow: var(--shadow);
     }
+
     .step::before {
       counter-increment: step;
       content: counter(step);
-      position:absolute;
-      left:16px; top:16px;
-      width:28px; height:28px;
-      border-radius:50%;
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
       background: var(--brand);
-      color:#fff;
-      display:grid;
-      place-items:center;
-      font-weight:800;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
     }
 
     /* Contact + Map */
-    .contact { display:grid; gap:16px; }
-    @media(min-width: 900px){
-      .contact { grid-template-columns: 1.1fr .9fr; }
+    .contact {
+      display: grid;
+      gap: 16px;
     }
+
+    @media(min-width: 900px) {
+      .contact {
+        grid-template-columns: 1.1fr .9fr;
+      }
+    }
+
     iframe.map {
-      width:100%;
+      width: 100%;
       height: 340px;
-      border:0;
+      border: 0;
       border-radius: 14px;
       box-shadow: var(--shadow);
     }
 
     footer {
-      border-top:1px solid var(--border);
+      border-top: 1px solid var(--border);
       padding: 40px 0;
       color: var(--muted);
-      font-size:14px;
-    }
-    .footer-grid { display:grid; gap:16px; }
-    @media(min-width: 768px){
-      .footer-grid { grid-template-columns: 2fr 1fr; }
+      font-size: 14px;
     }
 
-    .nowrap { white-space: nowrap; }
-  /* Recruit & Volunteer */
-.recruit-section {
-  padding: 4rem 0;
-  background: #f8fafc;
-}
+    .footer-grid {
+      display: grid;
+      gap: 16px;
+    }
 
-.recruit-lead {
-  max-width: 720px;
-  margin: 0 auto 2.5rem;
-  font-size: 0.98rem;
-  line-height: 1.9;
-  color: #475569;
-}
+    @media(min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
 
-.recruit-grid {
-  display: grid;
-  gap: 2rem;
-}
+    .nowrap {
+      white-space: nowrap;
+    }
 
-@media (min-width: 900px) {
-  .recruit-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
+    /* Recruit & Volunteer */
+    .recruit-section {
+      padding: 4rem 0;
+      background: #f8fafc;
+    }
 
-.recruit-card {
-  background: #ffffff;
-  border-radius: 24px;
-  padding: 1.75rem 1.75rem 2rem;
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
-  border: 1px solid #e2e8f0;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
+    .recruit-lead {
+      max-width: 720px;
+      margin: 0 auto 2.5rem;
+      font-size: 0.98rem;
+      line-height: 1.9;
+      color: #475569;
+    }
 
-.recruit-tag {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.25rem 0.75rem;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  background: #ecfdf5;
-  color: #15803d;
-  margin-bottom: 0.5rem;
-}
+    .recruit-grid {
+      display: grid;
+      gap: 2rem;
+    }
 
-.recruit-card h3 {
-  font-size: 1.1rem;
-  margin: 0;
-}
+    @media (min-width: 900px) {
+      .recruit-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
 
-.recruit-meta {
-  font-size: 0.85rem;
-  color: #64748b;
-}
+    .recruit-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 1.75rem 1.75rem 2rem;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
+      border: 1px solid #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
 
-.recruit-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.9rem;
-}
+    .recruit-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: #ecfdf5;
+      color: #15803d;
+      margin-bottom: 0.5rem;
+    }
 
-.recruit-table th,
-.recruit-table td {
-  padding: 0.4rem 0.3rem;
-  vertical-align: top;
-}
+    .recruit-card h3 {
+      font-size: 1.1rem;
+      margin: 0;
+    }
 
-.recruit-table th {
-  width: 28%;
-  font-weight: 600;
-  color: #0f172a;
-}
+    .recruit-meta {
+      font-size: 0.85rem;
+      color: #64748b;
+    }
 
-.recruit-table tr + tr th,
-.recruit-table tr + tr td {
-  border-top: 1px solid #e2e8f0;
-}
+    .recruit-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
 
-.recruit-cta {
-  margin-top: 1.25rem;
-  font-size: 0.85rem;
-  color: #475569;
-}
+    .recruit-table th,
+    .recruit-table td {
+      padding: 0.4rem 0.3rem;
+      vertical-align: top;
+    }
 
-.recruit-cta a.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.55rem 1.4rem;
-  border-radius: 999px;
-  background: #16a34a;
-  color: #ffffff;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-decoration: none;
-  margin-top: 0.5rem;
-}
+    .recruit-table th {
+      width: 28%;
+      font-weight: 600;
+      color: #0f172a;
+    }
 
-.recruit-cta a.button:hover {
-  background: #15803d;
-}
+    .recruit-table tr+tr th,
+    .recruit-table tr+tr td {
+      border-top: 1px solid #e2e8f0;
+    }
 
-.volunteer-box {
-  margin-top: 3rem;
-  padding: 1.75rem;
-  border-radius: 24px;
-  background: #ecfeff;
-  border: 1px solid #bae6fd;
-}
+    .recruit-cta {
+      margin-top: 1.25rem;
+      font-size: 0.85rem;
+      color: #475569;
+    }
 
-.volunteer-box h3 {
-  margin-top: 0;
-  font-size: 1rem;
-}
+    .recruit-cta a.button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.55rem 1.4rem;
+      border-radius: 999px;
+      background: #16a34a;
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 0.5rem;
+    }
 
-.volunteer-box ul {
-  padding-left: 1.1rem;
-  margin: 0.6rem 0 0.6rem;
-  font-size: 0.9rem;
-}
+    .recruit-cta a.button:hover {
+      background: #15803d;
+    }
 
-.volunteer-box li + li {
-  margin-top: 0.15rem;
-}
-/* Hero の全体背景（あなたの hero.jpg を使う） */
-.hero {
-  background: url('hero.jpg') center/cover no-repeat;
-  padding: 160px 20px 60px;
-  text-align: center;
-  color: #fff;
-  position: relative;
-}
+    .volunteer-box {
+      margin-top: 3rem;
+      padding: 1.75rem;
+      border-radius: 24px;
+      background: #ecfeff;
+      border: 1px solid #bae6fd;
+    }
 
-/* 下に薄く黒いフィルターを入れて文字を読みやすくする */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.45); /* ←濃すぎなら0.3、もっと読みやすくなら0.5 */
-  z-index: 0;
-}
+    .volunteer-box h3 {
+      margin-top: 0;
+      font-size: 1rem;
+    }
 
-.hero-inner { position: relative; z-index: 1; }
+    .volunteer-box ul {
+      padding-left: 1.1rem;
+      margin: 0.6rem 0 0.6rem;
+      font-size: 0.9rem;
+    }
 
-/* 上段メッセージ */
-.hero-eyecatch {
-  font-size: 18px;
-  opacity: 0.9;
-  margin-bottom: 10px;
-}
+    .volunteer-box li+li {
+      margin-top: 0.15rem;
+    }
 
-.hero-title {
-  font-size: 32px;
-  font-weight: 700;
-  margin: 10px 0 20px;
-}
+    /* Hero の全体背景（あなたの hero.jpg を使う） */
+    .hero {
+      background: url('hero.jpg') center/cover no-repeat;
+      padding: 160px 20px 60px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
 
-.hero-desc {
-  font-size: 18px;
-  line-height: 1.7;
-  margin-bottom: 30px;
-}
+    /* 下に薄く黒いフィルターを入れて文字を読みやすくする */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.45);
+      /* ←濃すぎなら0.3、もっと読みやすくなら0.5 */
+      z-index: 0;
+    }
 
-/* ボタン */
-.hero-btn {
-  display: inline-block;
-  padding: 14px 28px;
-  background: #7da35a;
-  border-radius: 6px;
-  color: #fff;
-  font-weight: 600;
-}
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+    }
 
-/* 下段：採用帯 */
-.hero-recruit-band {
-  background: rgba(255, 255, 255, 0.92);
-  padding: 18px 20px;
-  margin-top: 40px;
-  border-radius: 8px;
-  display: inline-flex;
-  align-items: center;
-  gap: 20px;
-  z-index: 2;
-  position: relative;
-}
+    /* 上段メッセージ */
+    .hero-eyecatch {
+      font-size: 18px;
+      opacity: 0.9;
+      margin-bottom: 10px;
+    }
 
-.band-text {
-  color: #333;
-  font-size: 16px;
-}
+    .hero-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 10px 0 20px;
+    }
 
-.band-button {
-  background: #7da35a;
-  padding: 8px 18px;
-  border-radius: 6px;
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-}
-/* ===== Services section (主なサービス) をより見栄えよく ===== */
+    .hero-desc {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
 
-#services {
-  padding: 80px 0;
-  background: #f8fafc;
-}
+    /* ボタン */
+    .hero-btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #7da35a;
+      border-radius: 6px;
+      color: #fff;
+      font-weight: 600;
+    }
 
-#services .section-title {
-  margin-bottom: 32px;
-}
+    /* 下段：採用帯 */
+    .hero-recruit-band {
+      background: rgba(255, 255, 255, 0.92);
+      padding: 18px 20px;
+      margin-top: 40px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 20px;
+      z-index: 2;
+      position: relative;
+    }
 
-/* グリッド配置（PCで2列、スマホで1列） */
-#services .grid {
-  display: grid;
-  gap: 24px;
-}
+    .band-text {
+      color: #333;
+      font-size: 16px;
+    }
 
-@media (min-width: 900px) {
-  #services .grid-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
+    .band-button {
+      background: #7da35a;
+      padding: 8px 18px;
+      border-radius: 6px;
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+    }
 
-/* カード本体 */
-#services .card {
-  background: #ffffff;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
-  border: 1px solid #e2e8f0;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.18s ease-out, box-shadow 0.18s ease-out;
-}
+    /* ===== Services section (主なサービス) をより見栄えよく ===== */
 
-#services .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 24px 55px rgba(15, 23, 42, 0.10);
-}
+    #services {
+      padding: 80px 0;
+      background: #f8fafc;
+    }
 
-/* 画像まわり（アスペクト比固定＋バッジ） */
-#services .media {
-  position: relative;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-}
+    #services .section-title {
+      margin-bottom: 32px;
+    }
 
-#services .media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transform: scale(1.02);
-  transition: transform 0.25s ease-out;
-}
+    /* グリッド配置（PCで2列、スマホで1列） */
+    #services .grid {
+      display: grid;
+      gap: 24px;
+    }
 
-#services .card:hover .media img {
-  transform: scale(1.06);
-}
+    @media (min-width: 900px) {
+      #services .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
 
-/* 画像左下のラベル */
-#services .badge {
-  position: absolute;
-  left: 16px;
-  top: 16px;          /* 左上に配置（bottom ではなく top） */
-  bottom: auto;
-  padding: 4px 12px;
-  border-radius: 999px;
-  background: rgba(15, 23, 42, 0.86);
-  color: #f9fafb;
-  font-size: 0.8rem;
-  font-weight: 600;
+    /* カード本体 */
+    #services .card {
+      background: #ffffff;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
+      border: 1px solid #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.18s ease-out, box-shadow 0.18s ease-out;
+    }
 
-  /* ここからが “おかしな縦長” を直すための上書き */
-  height: auto;
-  line-height: 1.4;
-  display: inline-flex;
-  align-items: center;
-  writing-mode: horizontal-tb;  /* 縦書きになっていた場合に強制的に横書きに戻す */
-}
+    #services .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 55px rgba(15, 23, 42, 0.10);
+    }
 
-}
+    /* 画像まわり（アスペクト比固定＋バッジ） */
+    #services .media {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+    }
 
-/* タイトル & 本文 */
-#services .card h3 {
-  margin: 16px 20px 8px;
-  font-size: 1.1rem;
-}
+    #services .media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: scale(1.02);
+      transition: transform 0.25s ease-out;
+    }
 
-#services .card p {
-  margin: 0 20px 20px 20px;
-  font-size: 0.94rem;
-  line-height: 1.8;
-  color: #475569;
-}
-/* 採用セクションの画像レイアウト */
-.recruit-visual,
-.volunteer-visual {
-  margin-bottom: 16px;
-  border-radius: 18px;
-  overflow: hidden;
-}
+    #services .card:hover .media img {
+      transform: scale(1.06);
+    }
 
-.recruit-visual img,
-.volunteer-visual img {
-  width: 100%;
-  display: block;
-}
-/*------------------------------------
+    /* 画像左下のラベル */
+    #services .badge {
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      /* 左上に配置（bottom ではなく top） */
+      bottom: auto;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.86);
+      color: #f9fafb;
+      font-size: 0.8rem;
+      font-weight: 600;
+
+      /* ここからが “おかしな縦長” を直すための上書き */
+      height: auto;
+      line-height: 1.4;
+      display: inline-flex;
+      align-items: center;
+      writing-mode: horizontal-tb;
+      /* 縦書きになっていた場合に強制的に横書きに戻す */
+    }
+
+    }
+
+    /* タイトル & 本文 */
+    #services .card h3 {
+      margin: 16px 20px 8px;
+      font-size: 1.1rem;
+    }
+
+    #services .card p {
+      margin: 0 20px 20px 20px;
+      font-size: 0.94rem;
+      line-height: 1.8;
+      color: #475569;
+    }
+
+    /* 採用セクションの画像レイアウト */
+    .recruit-visual,
+    .volunteer-visual {
+      margin-bottom: 16px;
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .recruit-visual img,
+    .volunteer-visual img {
+      width: 100%;
+      display: block;
+    }
+
+    /*------------------------------------
   全体の余白・見出し・画像などの統一デザイン調整
 ------------------------------------*/
 
-/* セクションの上下余白を統一 */
-section {
-  padding: 80px 0;
-}
+    /* セクションの上下余白を統一 */
+    section {
+      padding: 80px 0;
+    }
 
-/* 見出し（h2）を統一スタイルに */
-.section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 40px;
-  position: relative;
-  padding-bottom: 12px;
-}
+    /* 見出し（h2）を統一スタイルに */
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+      padding-bottom: 12px;
+    }
 
-.section-title::after {
-  content: "";
-  width: 70px;
-  height: 4px;
-  background: var(--brand-600);
-  display: block;
-  margin: 12px auto 0;
-  border-radius: 4px;
-}
+    .section-title::after {
+      content: "";
+      width: 70px;
+      height: 4px;
+      background: var(--brand-600);
+      display: block;
+      margin: 12px auto 0;
+      border-radius: 4px;
+    }
 
-/* h3 デザイン統一 */
-h3 {
-  margin: 20px 0 12px;
-  font-size: 1.35rem;
-  font-weight: 600;
-  line-height: 1.5;
-}
+    /* h3 デザイン統一 */
+    h3 {
+      margin: 20px 0 12px;
+      font-size: 1.35rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
 
-/* 全画像の角丸と影を統一 */
-.card img,
-.recruit-visual img,
-.volunteer-visual img {
-  border-radius: 18px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-}
+    /* 全画像の角丸と影を統一 */
+    .card img,
+    .recruit-visual img,
+    .volunteer-visual img {
+      border-radius: 18px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    }
 
-/* セクション間のコンテナ余白補強 */
-.container > p,
-.container > div,
-.container > table {
-  margin-bottom: 32px;
-}
+    /* セクション間のコンテナ余白補強 */
+    .container>p,
+    .container>div,
+    .container>table {
+      margin-bottom: 32px;
+    }
 
-/* スマホ最適化 */
-@media (max-width: 768px) {
+    /* スマホ最適化 */
+    @media (max-width: 768px) {
 
-  .section-title {
-    font-size: 1.6rem;
-    margin-bottom: 32px;
-  }
+      .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 32px;
+      }
 
-  h3 {
-    font-size: 1.25rem;
-  }
+      h3 {
+        font-size: 1.25rem;
+      }
 
-  section {
-    padding: 60px 0;
-  }
+      section {
+        padding: 60px 0;
+      }
 
-  .recruit-card,
-  .volunteer-box {
-    margin-bottom: 48px;
-  }
-}
-/* --- Access Section --- */
-.access-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-top: 30px;
-}
+      .recruit-card,
+      .volunteer-box {
+        margin-bottom: 48px;
+      }
+    }
 
-.access-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 30px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
-}
+    /* --- Access Section --- */
+    .access-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 30px;
+    }
 
-.info-card ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
+    .access-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+    }
 
-.info-card li {
-  margin-bottom: 14px;
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  font-size: 16px;
-  line-height: 1.6;
-}
+    .info-card ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
 
-.info-card a {
-  color: var(--brand-600);
-}
+    .info-card li {
+      margin-bottom: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
 
-.icon {
-  font-size: 20px;
-  width: 24px;
-  display: inline-block;
-}
+    .info-card a {
+      color: var(--brand-600);
+    }
 
-.map-card iframe {
-  border-radius: 12px;
-  height: 300px;
-  width: 100%;
-}
+    .icon {
+      font-size: 20px;
+      width: 24px;
+      display: inline-block;
+    }
 
-/* スマホ対応 */
-@media (max-width: 768px) {
-  .access-grid {
-    grid-template-columns: 1fr;
-  }
-  .map-card iframe {
-    height: 260px;
-  }
-}
+    .map-card iframe {
+      border-radius: 12px;
+      height: 300px;
+      width: 100%;
+    }
 
+    /* スマホ対応 */
+    @media (max-width: 768px) {
+      .access-grid {
+        grid-template-columns: 1fr;
+      }
 
+      .map-card iframe {
+        height: 260px;
+      }
+    }
+
+    /* Contact Form */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--fg);
+    }
+
+    .form-group label .optional {
+      font-weight: 400;
+      color: var(--muted);
+      font-size: 0.8rem;
+      margin-left: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: inherit;
+      background: #fff;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      box-sizing: border-box;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--brand);
+      box-shadow: 0 0 0 3px rgba(125, 163, 90, 0.15);
+    }
+
+    .form-group textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--brand);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(125, 163, 90, 0.3);
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .form-submit:hover {
+      background: var(--brand-600);
+      transform: translateY(-2px);
+    }
+
+    .form-submit:active {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .form-submit {
+        width: 100%;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header>
     <div class="container nav">
@@ -700,40 +921,40 @@ h3 {
         <div class="logo" aria-hidden="true">W</div>
         <div>サポートセンターわかくさ</div>
       </div>
-<nav class="menu" aria-label="メインメニュー">
-  <a href="#services">サービス</a>
-  <a href="#recruit">採用情報</a>   <!-- ← これ新しい -->
-  <a href="#flow">ご利用の流れ</a>
-  <a href="#access">アクセス</a>
-  <a class="btn" href="#contact" aria-label="お問い合わせへ移動">お問い合わせ</a>
-    </nav>
+      <nav class="menu" aria-label="メインメニュー">
+        <a href="#services">サービス</a>
+        <a href="#recruit">採用情報</a> <!-- ← これ新しい -->
+        <a href="#flow">ご利用の流れ</a>
+        <a href="#access">アクセス</a>
+        <a class="btn" href="#contact" aria-label="お問い合わせへ移動">お問い合わせ</a>
+      </nav>
     </div>
   </header>
 
   <main>
-  <!-- Hero Section -->
-<section class="hero">
-  <div class="hero-inner">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-inner">
 
-    <!-- 上段：利用者向けメッセージ -->
-    <p class="hero-eyecatch">大阪市住之江区の障がい福祉サービス</p>
-    <h1 class="hero-title">一人ひとりの「その人らしい暮らし」を、いっしょに。</h1>
-    <p class="hero-desc">
-      重度訪問介護・居宅介護・行動援護・移動支援を中心に、<br>
-      地域での暮らしが途切れない支援を行っています。
-    </p>
+        <!-- 上段：利用者向けメッセージ -->
+        <p class="hero-eyecatch">大阪市住之江区の障がい福祉サービス</p>
+        <h1 class="hero-title">一人ひとりの「その人らしい暮らし」を、いっしょに。</h1>
+        <p class="hero-desc">
+          重度訪問介護・居宅介護・行動援護・移動支援を中心に、<br>
+          地域での暮らしが途切れない支援を行っています。
+        </p>
 
-    <a href="#contact" class="button hero-btn">サービスのご相談はこちら</a>
-  </div>
+        <a href="#contact" class="button hero-btn">サービスのご相談はこちら</a>
+      </div>
 
-  <!-- 下段：採用への誘導帯 -->
-  <div class="hero-recruit-band">
-    <div class="band-text">
-      🌱 一緒に働く仲間を募集しています（未経験・ブランクあり歓迎）
-    </div>
-    <a href="#recruit" class="band-button">採用情報を見る</a>
-  </div>
-</section>
+      <!-- 下段：採用への誘導帯 -->
+      <div class="hero-recruit-band">
+        <div class="band-text">
+          🌱 一緒に働く仲間を募集しています（未経験・ブランクあり歓迎）
+        </div>
+        <a href="#recruit" class="band-button">採用情報を見る</a>
+      </div>
+    </section>
 
 
     <!-- Services with imagery -->
@@ -743,8 +964,8 @@ h3 {
         <div class="grid grid-2">
           <article class="card">
             <div class="media">
-             <img alt="重度訪問介護" src="service-judo.jpg">
-             <span class="badge">重度訪問介護</span>
+              <img alt="重度訪問介護" src="service-judo.jpg">
+              <span class="badge">重度訪問介護</span>
             </div>
             <h3>重度訪問介護</h3>
             <p>重度の肢体不自由、知的・精神の障がいにより常時介護を必要とする方のご自宅を訪問。入浴・排せつ・食事等の介護、家事、外出時の移動支援まで総合的に行います。</p>
@@ -762,7 +983,7 @@ h3 {
           <article class="card">
             <div class="media">
               <img alt="行動援護" src="service-kodo.jpg">
-               <span class="badge">行動援護</span>
+              <span class="badge">行動援護</span>
             </div>
             <h3>行動援護</h3>
             <p>知的・精神の障がいにより行動上の著しい困難がある方に、危険回避や移動中の介護、排せつ・食事等の介護など、外出場面も含め必要な援護を提供します。</p>
@@ -781,163 +1002,164 @@ h3 {
     </section>
 
     <!-- Flow -->
-       <!-- 採用情報セクション -->
-  <section id="recruit" class="recruit-section">
-  <div class="container">
-    <h2 class="section-title">採用情報</h2>
-    <p class="recruit-lead">
-      サポートセンターわかくさでは、障がいのある方の暮らしを一緒に支えてくださる仲間を募集しています。
-      経験の有無にかかわらず、「人の役に立ちたい」「地域で誰かの力になりたい」という想いを大切にしています。
-    </p>
+    <!-- 採用情報セクション -->
+    <section id="recruit" class="recruit-section">
+      <div class="container">
+        <h2 class="section-title">採用情報</h2>
+        <p class="recruit-lead">
+          サポートセンターわかくさでは、障がいのある方の暮らしを一緒に支えてくださる仲間を募集しています。
+          経験の有無にかかわらず、「人の役に立ちたい」「地域で誰かの力になりたい」という想いを大切にしています。
+        </p>
 
-    <div class="recruit-grid">
-      <!-- 正社員 -->
-      <article class="recruit-card">
-        <!-- ★ 正社員用イメージ -->
-        <figure class="recruit-visual">
-          <img src="recruit-full.jpg" alt="車いすの利用者さまと介護スタッフが向かい合って話している様子">
-        </figure>
+        <div class="recruit-grid">
+          <!-- 正社員 -->
+          <article class="recruit-card">
+            <!-- ★ 正社員用イメージ -->
+            <figure class="recruit-visual">
+              <img src="recruit-full.jpg" alt="車いすの利用者さまと介護スタッフが向かい合って話している様子">
+            </figure>
 
-        <div>
-          <span class="recruit-tag">正社員</span>
-          <h3>訪問介護スタッフ（重度訪問介護・居宅介護 等）</h3>
-          <p class="recruit-meta">
-            重度訪問介護・居宅介護・行動援護・移動支援など、利用者さまの暮らしに寄り添う訪問支援のお仕事です。
+            <div>
+              <span class="recruit-tag">正社員</span>
+              <h3>訪問介護スタッフ（重度訪問介護・居宅介護 等）</h3>
+              <p class="recruit-meta">
+                重度訪問介護・居宅介護・行動援護・移動支援など、利用者さまの暮らしに寄り添う訪問支援のお仕事です。
+              </p>
+            </div>
+
+            <table class="recruit-table">
+              <tr>
+                <th>勤務地</th>
+                <td>サポートセンターわかくさ（大阪市住之江区御崎5-14-11 クレセントマンションB108）を拠点に、大阪市内の利用者さま宅への訪問</td>
+              </tr>
+              <tr>
+                <th>仕事内容</th>
+                <td>
+                  入浴・排せつ・食事などの身体介護、調理・洗濯・掃除などの家事援助、外出・通院の付き添い など<br>
+                  ※担当するサービスは、ご本人の希望や経験に応じて相談のうえ決定します。
+                </td>
+              </tr>
+              <tr>
+                <th>応募資格</th>
+                <td>
+                  介護職員初任者研修（旧ヘルパー2級）以上をお持ちの方歓迎<br>
+                  障がい福祉分野での実務経験がある方優遇<br>
+                  ※未経験の方・ブランクのある方もお気軽にご相談ください。
+                </td>
+              </tr>
+              <tr>
+                <th>勤務時間</th>
+                <td>シフト制（例：9:00〜18:00 など）。夜間帯を含む重度訪問介護の勤務も応相談。</td>
+              </tr>
+              <tr>
+                <th>休日・休暇</th>
+                <td>シフトによる週休2日制／有給休暇／その他 休暇制度あり</td>
+              </tr>
+              <tr>
+                <th>給与</th>
+                <td>
+                  月給：当社規定による（経験・資格等を考慮のうえ決定）<br>
+                  資格手当・処遇改善手当 など別途支給あり<br>
+                  ※詳細は面談時にご説明いたします。お気軽にお問い合わせください。
+                </td>
+              </tr>
+              <tr>
+                <th>待遇・福利厚生</th>
+                <td>
+                  各種社会保険完備／交通費支給（規定あり）／昇給・賞与あり（業績による）／
+                  研修・資格取得支援制度　など
+                </td>
+              </tr>
+            </table>
+
+            <div class="recruit-cta">
+              ご興味のある方は、お気軽にお電話またはお問い合わせフォームからご連絡ください。<br>
+              <a href="#contact" class="button">正社員求人について問い合わせる</a>
+            </div>
+          </article>
+
+          <!-- パート・アルバイト -->
+          <article class="recruit-card">
+            <!-- ★ パート用イメージ -->
+            <figure class="recruit-visual">
+              <img src="recruit-part.jpg" alt="利用者さまとお茶を飲みながら談笑する介護スタッフ">
+            </figure>
+
+            <div>
+              <span class="recruit-tag">パート・アルバイト</span>
+              <h3>訪問介護スタッフ（登録ヘルパー）</h3>
+              <p class="recruit-meta">
+                ライフスタイルに合わせて働ける登録ヘルパーさんを募集しています。週1回・短時間からの勤務もご相談ください。
+              </p>
+            </div>
+
+            <table class="recruit-table">
+              <tr>
+                <th>勤務形態</th>
+                <td>週1日・1コマから勤務時間・曜日の相談OK／ダブルワーク・扶養内勤務も歓迎</td>
+              </tr>
+              <tr>
+                <th>仕事内容</th>
+                <td>
+                  身体介護・家事援助・移動支援などの訪問介護業務全般<br>
+                  慣れるまでは経験のあるスタッフが同行し、安心してお仕事に慣れていただけるようサポートします。
+                </td>
+              </tr>
+              <tr>
+                <th>応募資格</th>
+                <td>
+                  介護職員初任者研修（旧ヘルパー2級）以上をお持ちの方歓迎<br>
+                  学生・主婦（夫）・Wワークの方も歓迎します。
+                </td>
+              </tr>
+              <tr>
+                <th>給与</th>
+                <td>
+                  時給：当社規定による（サービス種別・時間帯により変動）<br>
+                  早朝・夜間・深夜手当／処遇改善手当 など別途支給あり<br>
+                  ※詳細はお問い合わせください。
+                </td>
+              </tr>
+              <tr>
+                <th>待遇</th>
+                <td>
+                  交通費支給（規定あり）／各種手当あり／研修・ミーティングあり／
+                  資格取得支援制度　など
+                </td>
+              </tr>
+            </table>
+
+            <div class="recruit-cta">
+              「少しだけ働いてみたい」「まずは話だけ聞いてみたい」という方も歓迎です。<br>
+              <a href="#contact" class="button">パート・登録ヘルパーについて問い合わせる</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- ボランティア募集 -->
+        <div class="volunteer-box">
+          <figure class="volunteer-visual">
+            <img src="volunteer.jpg" alt="利用者さまとボランティアが一緒に活動を楽しんでいる様子">
+          </figure>
+
+          <h3>ボランティアスタッフ募集</h3>
+          <p>
+            利用者さまとのお出かけや行事、サークル活動などをお手伝いいただけるボランティアさんも募集中です。
+            介護の資格や経験は問いません。「人と関わることが好き」「地域に役立つことをしてみたい」という方を歓迎します。
+          </p>
+          <ul>
+            <li>活動内容の例：外出時の付き添い、行事の準備や片付け、レクリエーションのお手伝い など</li>
+            <li>活動日時：平日・土日いずれも相談のうえ決定（単発参加もOK）</li>
+            <li>対象：高校生以上の方（18歳未満の方は保護者の同意をお願いする場合があります）</li>
+          </ul>
+          <p class="recruit-cta">
+            詳細はお問い合わせの際にご説明いたします。ご興味のある方は、お気軽にご連絡ください。<br>
+            <a href="#contact" class="button">ボランティアについて問い合わせる</a>
           </p>
         </div>
 
-        <table class="recruit-table">
-          <tr>
-            <th>勤務地</th>
-            <td>サポートセンターわかくさ（大阪市住之江区御崎5-14-11 クレセントマンションB108）を拠点に、大阪市内の利用者さま宅への訪問</td>
-          </tr>
-          <tr>
-            <th>仕事内容</th>
-            <td>
-              入浴・排せつ・食事などの身体介護、調理・洗濯・掃除などの家事援助、外出・通院の付き添い など<br>
-              ※担当するサービスは、ご本人の希望や経験に応じて相談のうえ決定します。
-            </td>
-          </tr>
-          <tr>
-            <th>応募資格</th>
-            <td>
-              介護職員初任者研修（旧ヘルパー2級）以上をお持ちの方歓迎<br>
-              障がい福祉分野での実務経験がある方優遇<br>
-              ※未経験の方・ブランクのある方もお気軽にご相談ください。
-            </td>
-          </tr>
-          <tr>
-            <th>勤務時間</th>
-            <td>シフト制（例：9:00〜18:00 など）。夜間帯を含む重度訪問介護の勤務も応相談。</td>
-          </tr>
-          <tr>
-            <th>休日・休暇</th>
-            <td>シフトによる週休2日制／有給休暇／その他 休暇制度あり</td>
-          </tr>
-          <tr>
-            <th>給与</th>
-            <td>
-              月給例：◯◯万円〜（経験・資格等を考慮のうえ決定）<br>
-              資格手当・処遇改善手当 など別途支給あり<br>
-              ※具体的な金額は面談時にご説明いたします。
-            </td>
-          </tr>
-          <tr>
-            <th>待遇・福利厚生</th>
-            <td>
-              各種社会保険完備／交通費支給（規定あり）／昇給・賞与あり（業績による）／
-              研修・資格取得支援制度　など
-            </td>
-          </tr>
-        </table>
-
-        <div class="recruit-cta">
-          ご興味のある方は、お気軽にお電話またはお問い合わせフォームからご連絡ください。<br>
-          <a href="#contact" class="button">正社員求人について問い合わせる</a>
-        </div>
-      </article>
-
-      <!-- パート・アルバイト -->
-      <article class="recruit-card">
-        <!-- ★ パート用イメージ -->
-        <figure class="recruit-visual">
-          <img src="recruit-part.jpg" alt="利用者さまとお茶を飲みながら談笑する介護スタッフ">
-        </figure>
-
-        <div>
-          <span class="recruit-tag">パート・アルバイト</span>
-          <h3>訪問介護スタッフ（登録ヘルパー）</h3>
-          <p class="recruit-meta">
-            ライフスタイルに合わせて働ける登録ヘルパーさんを募集しています。週1回・短時間からの勤務もご相談ください。
-          </p>
-        </div>
-
-        <table class="recruit-table">
-          <tr>
-            <th>勤務形態</th>
-            <td>週1日・1コマから勤務時間・曜日の相談OK／ダブルワーク・扶養内勤務も歓迎</td>
-          </tr>
-          <tr>
-            <th>仕事内容</th>
-            <td>
-              身体介護・家事援助・移動支援などの訪問介護業務全般<br>
-              慣れるまでは経験のあるスタッフが同行し、安心してお仕事に慣れていただけるようサポートします。
-            </td>
-          </tr>
-          <tr>
-            <th>応募資格</th>
-            <td>
-              介護職員初任者研修（旧ヘルパー2級）以上をお持ちの方歓迎<br>
-              学生・主婦（夫）・Wワークの方も歓迎します。
-            </td>
-          </tr>
-          <tr>
-            <th>給与</th>
-            <td>
-              時給例：◯◯◯◯円〜（サービス種別・時間帯により変動）<br>
-              早朝・夜間・深夜手当／処遇改善手当 など別途支給あり
-            </td>
-          </tr>
-          <tr>
-            <th>待遇</th>
-            <td>
-              交通費支給（規定あり）／各種手当あり／研修・ミーティングあり／
-              資格取得支援制度　など
-            </td>
-          </tr>
-        </table>
-
-        <div class="recruit-cta">
-          「少しだけ働いてみたい」「まずは話だけ聞いてみたい」という方も歓迎です。<br>
-          <a href="#contact" class="button">パート・登録ヘルパーについて問い合わせる</a>
-        </div>
-      </article>
-    </div>
-
-       <!-- ボランティア募集 -->
-    <div class="volunteer-box">
-      <figure class="volunteer-visual">
-        <img src="volunteer.jpg" alt="利用者さまとボランティアが一緒に活動を楽しんでいる様子">
-      </figure>
-
-      <h3>ボランティアスタッフ募集</h3>
-      <p>
-        利用者さまとのお出かけや行事、サークル活動などをお手伝いいただけるボランティアさんも募集中です。
-        介護の資格や経験は問いません。「人と関わることが好き」「地域に役立つことをしてみたい」という方を歓迎します。
-      </p>
-      <ul>
-        <li>活動内容の例：外出時の付き添い、行事の準備や片付け、レクリエーションのお手伝い など</li>
-        <li>活動日時：平日・土日いずれも相談のうえ決定（単発参加もOK）</li>
-        <li>対象：高校生以上の方（18歳未満の方は保護者の同意をお願いする場合があります）</li>
-      </ul>
-      <p class="recruit-cta">
-        詳細はお問い合わせの際にご説明いたします。ご興味のある方は、お気軽にご連絡ください。<br>
-        <a href="#contact" class="button">ボランティアについて問い合わせる</a>
-      </p>
-    </div>
-
-  </div>
-</section>
+      </div>
+    </section>
 
 
     <!-- ご利用の流れセクション -->
@@ -964,61 +1186,56 @@ h3 {
 
 
     <!-- Recruit -->
-    
+
 
     <!-- Volunteer -->
-    
+
 
     <!-- Access & Contact -->
-  <section id="access" class="access-section">
-  <div class="container">
-    <h2 class="section-title">アクセス</h2>
+    <section id="access" class="access-section">
+      <div class="container">
+        <h2 class="section-title">アクセス</h2>
 
-    <div class="access-grid">
+        <div class="access-grid">
 
-      <!-- 会社情報カード -->
-      <div class="access-card info-card">
-        <ul>
-          <li>
-            <span class="icon">📍</span>
-            <strong>所在地：</strong>大阪市住之江区御崎5-14-11 クレセントマンションB108
-          </li>
-          <li>
-            <span class="icon">📞</span>
-            <strong>電話：</strong><a href="tel:0666811211">06-6681-1211</a>
-          </li>
-          <li>
-            <span class="icon">📠</span>
-            <strong>FAX：</strong>06-6681-1246
-          </li>
-          <li>
-            <span class="icon">✉️</span>
-            <strong>メール：</strong>
-            <a href="mailto:wakakusa2002@gmail.com">wakakusa2002@gmail.com</a>
-          </li>
-          <li>
-            <span class="icon">⏰</span>
-            <strong>受付時間：</strong>平日 10:00〜17:00
-          </li>
-        </ul>
+          <!-- 会社情報カード -->
+          <div class="access-card info-card">
+            <ul>
+              <li>
+                <span class="icon">📍</span>
+                <strong>所在地：</strong>大阪市住之江区御崎5-14-11 クレセントマンションB108
+              </li>
+              <li>
+                <span class="icon">📞</span>
+                <strong>電話：</strong><a href="tel:0666811211">06-6681-1211</a>
+              </li>
+              <li>
+                <span class="icon">📠</span>
+                <strong>FAX：</strong>06-6681-1246
+              </li>
+              <li>
+                <span class="icon">✉️</span>
+                <strong>メール：</strong>
+                <a href="mailto:wakakusa2002@gmail.com">wakakusa2002@gmail.com</a>
+              </li>
+              <li>
+                <span class="icon">⏰</span>
+                <strong>受付時間：</strong>平日 10:00〜17:00
+              </li>
+            </ul>
+          </div>
+
+          <!-- Googleマップカード -->
+          <div class="access-card map-card">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.8928472533403!2d135.4775376757404!3d34.606870972953146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000dd0373eebcb9%3A0xb0f45ebbef20fdb7!2z44CSNTU5LTAwMTMg5aSn6Ziq5bqc5aSn6Ziq5biC5L2P5LmL5rGf5Yy65b6h5bSO77yV5LiB55uu77yR77yU4oiS77yR77yRIOOCr-ODrOOCu-ODs-ODiOODnuODs-OCt-ODp-ODsyBiMTA4!5e0!3m2!1sja!2sjp!4v1763534377496!5m2!1sja!2sjp"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+        </div>
       </div>
-
-      <!-- Googleマップカード -->
-      <div class="access-card map-card">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7131975713467!2d135.48276367622273!3d34.619953072946705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e9423b706bbb%3A0xacf7b7c76bb4a5d!2z44CSNTU5LTAwMTMg5aSn6Ziq5bqc5aSn5bqc5biC5bSO5LiL55S677yR5LiB55uu77yR77yUIOOCq-ODvOOCquODvOODiOODvOOCr-ODvOOCuQ!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
-          width="100%"
-          height="100%"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-
-    </div>
-  </div>
-</section>
+    </section>
 
 
     <!-- About / Company -->
@@ -1063,12 +1280,26 @@ h3 {
             </p>
           </div>
           <div class="card">
-            <h3>メールフォーム（準備中）</h3>
-            <p>現在、外部フォームサービスと連携準備中です。お急ぎの方はメール・お電話・LINEをご利用ください。</p>
-            <div class="cta-wrap">
-              <a class="btn-lg" href="mailto:wakakusa2002@gmail.com">メールで連絡</a>
-              <a class="btn-lg btn-ghost" href="https://line.me/R/ti/p/" target="_blank" rel="noopener">LINEで相談</a>
-            </div>
+            <h3>メールフォームでのお問い合わせ</h3>
+            <form class="contact-form" action="https://formspree.io/f/mjgwqgyn" method="POST">
+              <div class="form-group">
+                <label for="name">お名前</label>
+                <input type="text" id="name" name="name" placeholder="例：山田 太郎" required>
+              </div>
+              <div class="form-group">
+                <label for="email">メールアドレス</label>
+                <input type="email" id="email" name="email" placeholder="例：example@mail.com" required>
+              </div>
+              <div class="form-group">
+                <label for="subject">件名<span class="optional">（任意）</span></label>
+                <input type="text" id="subject" name="subject" placeholder="例：サービスについて">
+              </div>
+              <div class="form-group">
+                <label for="message">お問い合わせ内容</label>
+                <textarea id="message" name="message" placeholder="ご質問やご相談内容をご記入ください" required></textarea>
+              </div>
+              <button type="submit" class="form-submit">送信する</button>
+            </form>
           </div>
         </div>
       </div>
@@ -1109,4 +1340,5 @@ h3 {
   }
   </script>
 </body>
+
 </html>
