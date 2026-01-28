@@ -998,10 +998,10 @@
 <body>
   <header>
     <div class="container nav">
-      <div class="brand" id="scrollTop" role="button" aria-label="ページ上部へ">
+      <a class="brand" href="#top" aria-label="ページ上部へ">
         <div class="logo" aria-hidden="true">W</div>
         <div>サポートセンターわかくさ</div>
-      </div>
+      </a>
       <nav class="menu" aria-label="メインメニュー">
         <a href="#services">サービス</a>
         <a href="#recruit">採用情報</a> <!-- ← これ新しい -->
@@ -1423,12 +1423,6 @@
       "addressCountry": "JP"
     }
   }
-  </script>
-
-  <script>
-    document.getElementById('scrollTop')?.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
   </script>
 </body>
 
