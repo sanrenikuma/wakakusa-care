@@ -871,6 +871,25 @@
       .hero::after {
         pointer-events: none;
       }
+
+      /* 右下固定の「↑戻る」ボタン */
+      .back-to-top {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        width: 48px;
+        height: 48px;
+        border-radius: 999px;
+        border: none;
+        background: var(--brand);
+        color: #fff;
+        font-size: 18px;
+        font-weight: 800;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, .18);
+        z-index: 99999;
+        display: none;
+        cursor: pointer;
+      }
     }
 
     /* --- Access Section --- */
@@ -1445,18 +1464,22 @@
   }
   </script>
 
-  <!-- ロゴタップでページ最上部へスクロール -->
+  <!-- 右下固定の「↑戻る」ボタン -->
+  <button id="backToTop" class="back-to-top" aria-label="ページ上部へ戻る">↑</button>
   <script>
     (function () {
-      var el = document.querySelector('.brand');
-      if (el) {
-        var goTop = function (e) {
-          e.preventDefault();
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        };
-        el.addEventListener('touchstart', goTop, { passive: false });
-        el.addEventListener('click', goTop);
-      }
+      var btn = document.getElementById('backToTop');
+      if (!btn) return;
+      var toggle = function () {
+        btn.style.display = (window.scrollY > 300) ? 'block' : 'none';
+      };
+      var goTop = function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      };
+      window.addEventListener('scroll', toggle, { passive: true });
+      btn.addEventListener('click', goTop);
+      btn.addEventListener('touchstart', goTop, { passive: true });
+      toggle();
     })();
   </script>
 </body>
