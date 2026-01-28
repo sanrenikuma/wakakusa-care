@@ -681,8 +681,6 @@
       /* 縦書きになっていた場合に強制的に横書きに戻す */
     }
 
-    }
-
     /* タイトル & 本文 */
     #services .card h3 {
       margin: 16px 20px 8px;
@@ -850,6 +848,28 @@
       .recruit-table td {
         padding: 0;
         word-break: break-word;
+      }
+
+      /* スマホでロゴのタップを最優先にする */
+      .brand {
+        position: relative;
+        z-index: 9999;
+        pointer-events: auto;
+      }
+
+      header,
+      .nav {
+        pointer-events: auto;
+      }
+
+      /* 疑似要素がタップを奪うのを防止 */
+      header::before,
+      header::after,
+      .nav::before,
+      .nav::after,
+      .hero::before,
+      .hero::after {
+        pointer-events: none;
       }
     }
 
@@ -1423,6 +1443,21 @@
       "addressCountry": "JP"
     }
   }
+  </script>
+
+  <!-- ロゴタップでページ最上部へスクロール -->
+  <script>
+    (function () {
+      var el = document.querySelector('.brand');
+      if (el) {
+        var goTop = function (e) {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+        el.addEventListener('touchstart', goTop, { passive: false });
+        el.addEventListener('click', goTop);
+      }
+    })();
   </script>
 </body>
 
