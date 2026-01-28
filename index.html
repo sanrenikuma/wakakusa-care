@@ -797,14 +797,21 @@
 
       /* 採用テーブル横スクロール */
       .table-scroll {
+        display: block;
+        width: 100%;
         overflow-x: auto;
+        overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
+        touch-action: pan-x;
+        overscroll-behavior-x: contain;
+        scrollbar-width: thin;
         margin: 0 -1.75rem;
         padding: 0 1.75rem;
       }
 
       .table-scroll .recruit-table {
-        min-width: 520px;
+        min-width: 680px;
+        table-layout: auto;
       }
     }
 
