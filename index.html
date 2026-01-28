@@ -123,6 +123,7 @@
       gap: 12px;
       font-weight: 800;
       letter-spacing: .5px;
+      cursor: pointer;
     }
 
     .logo {
@@ -997,7 +998,7 @@
 <body>
   <header>
     <div class="container nav">
-      <div class="brand" aria-label="サイト名">
+      <div class="brand" id="scrollTop" role="button" aria-label="ページ上部へ">
         <div class="logo" aria-hidden="true">W</div>
         <div>サポートセンターわかくさ</div>
       </div>
@@ -1422,6 +1423,12 @@
       "addressCountry": "JP"
     }
   }
+  </script>
+
+  <script>
+    document.getElementById('scrollTop')?.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   </script>
 </body>
 
