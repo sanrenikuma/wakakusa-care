@@ -795,6 +795,16 @@
         margin-bottom: 48px;
       }
 
+      .recruit-card {
+        overflow: visible;
+      }
+
+      .recruit-visual img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+
       /* 採用テーブル横スクロール */
       .table-scroll {
         display: block;
@@ -805,8 +815,8 @@
         touch-action: pan-x;
         overscroll-behavior-x: contain;
         scrollbar-width: thin;
-        margin: 0 -1.75rem;
-        padding: 0 1.75rem;
+        margin: 0;
+        padding: 0 8px;
       }
 
       .table-scroll .recruit-table {
