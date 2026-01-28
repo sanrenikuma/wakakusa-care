@@ -799,29 +799,56 @@
         overflow: visible;
       }
 
+      /* 右端切れ防止 */
+      #recruit,
+      #recruit * {
+        max-width: 100%;
+      }
+
       .recruit-visual img {
         width: 100%;
         height: auto;
-        object-fit: contain;
       }
 
-      /* 採用テーブル横スクロール */
+      /* 採用テーブルを縦積み化 */
       .table-scroll {
+        overflow: visible;
+        padding: 0;
+        margin: 0;
+      }
+
+      .recruit-table,
+      .recruit-table tbody,
+      .recruit-table tr,
+      .recruit-table th,
+      .recruit-table td {
         display: block;
         width: 100%;
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        touch-action: pan-x;
-        overscroll-behavior-x: contain;
-        scrollbar-width: thin;
-        margin: 0;
-        padding: 0 8px;
       }
 
-      .table-scroll .recruit-table {
-        min-width: 680px;
-        table-layout: auto;
+      .recruit-table {
+        min-width: 0;
+      }
+
+      .recruit-table tr {
+        border-top: 1px solid var(--border);
+        padding: 12px 0;
+      }
+
+      .recruit-table tr:first-child {
+        border-top: 0;
+      }
+
+      .recruit-table th {
+        font-weight: 700;
+        padding: 0 0 4px 0;
+        color: var(--brand-600);
+        font-size: 0.85rem;
+      }
+
+      .recruit-table td {
+        padding: 0;
+        word-break: break-word;
       }
     }
 
