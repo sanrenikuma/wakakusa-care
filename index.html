@@ -2,1451 +2,2569 @@
 <html lang="ja">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>サポートセンターわかくさ | wakakusa-care.com</title>
-  <meta name="description" content="大阪市を中心に重度訪問介護・居宅介護・行動援護・移動支援・日中一時支援を提供するサポートセンターわかくさの公式サイト。求人・ボランティア募集中。" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>サポートセンターわかくさ | 大阪市住之江区の障がい福祉サービス</title>
+  <meta name="description" content="大阪市住之江区のサポートセンターわかくさ。重度訪問介護・居宅介護・行動援護・移動支援・日中一時支援のご相談、求人・見学のお問い合わせを承っています。">
+  <meta name="theme-color" content="#28543b">
+  <link rel="canonical" href="https://wakakusa-care.com/">
 
-  <!-- Fonts -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:title" content="暮らしのそばに、わかくさ。">
+  <meta property="og:description" content="大阪市住之江区で、障がいのある方のその人らしい暮らしを支えています。利用相談・求人・見学のお問い合わせはこちら。">
+  <meta property="og:url" content="https://wakakusa-care.com/">
+  <meta property="og:image" content="https://wakakusa-care.com/hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-
-  <!-- OGP -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="サポートセンターわかくさ" />
-  <meta property="og:description" content="地域とともに支える、わかくさの介護。求人・ボランティア募集中。" />
-  <meta property="og:url" content="https://wakakusa-care.com/" />
-  <meta property="og:image"
-    content="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=1600&auto=format&fit=crop" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&family=Noto+Serif+JP:wght@600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #ffffff;
-      --fg: #0f172a;
-      /* slate-900 */
-      --muted: #64748b;
-      /* slate-500 */
-      --brand: #7DA35A;
-      /* wakakusa green */
-      --brand-600: #68924A;
-      --brand-50: #F4FCE3;
-      --accent: #6EE7F9;
-      /* cyan */
-      --accent-2: #F59E0B;
-      /* amber */
-      --card: #ffffff;
-      --border: #e5e7eb;
-      /* gray-200 */
-      --radius: 18px;
-      --shadow: 0 10px 30px rgba(2, 6, 23, .08);
-      --maxw: 1120px;
+      --ink: #18342a;
+      --ink-soft: #365448;
+      --muted: #6a7d74;
+      --leaf: #4f7b58;
+      --leaf-dark: #28543b;
+      --leaf-deep: #173d2a;
+      --mint: #e7f0e0;
+      --mint-strong: #d5e8ca;
+      --paper: #fbfaf5;
+      --paper-warm: #f5f1e8;
+      --sun: #f3b75f;
+      --coral: #d96d5a;
+      --line: #dce6dc;
+      --white: #ffffff;
+      --shadow-sm: 0 12px 30px rgba(23, 61, 42, .08);
+      --shadow-lg: 0 26px 70px rgba(23, 61, 42, .14);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --max: 1180px;
     }
 
-    * {
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
     }
 
-    html,
-    body {
-      height: 100%;
-      overflow-x: hidden;
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 96px;
     }
 
-    img,
-    iframe,
-    table {
+    body {
+      min-width: 320px;
+      margin: 0;
+      overflow-x: hidden;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background: var(--mint-strong);
+      color: var(--ink-deep);
+    }
+
+    img {
+      display: block;
       max-width: 100%;
     }
 
-    body {
-      margin: 0;
-      padding-top: 80px;
-      /* ★ ここを追加：ヘッダーの高さぶん下げる */
-      background: var(--bg);
-      color: var(--fg);
-      font-family: 'Noto Sans JP', system-ui, -apple-system, Segoe UI, Roboto,
-        'Helvetica Neue', Arial, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN",
-        "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
-      line-height: 1.75;
-    }
-
     a {
-      color: var(--brand-600);
+      color: inherit;
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid var(--sun);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 1000;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--white);
+      transform: translateY(-160%);
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
     }
 
     .container {
-      width: 100%;
-      max-width: var(--maxw);
+      width: min(var(--max), calc(100% - 48px));
       margin: 0 auto;
-      padding: 0 20px;
     }
 
-
-    /* Header */
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      background: rgba(248, 250, 252, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    .topbar {
+      background: var(--leaf-deep);
+      color: rgba(255, 255, 255, .86);
+      font-size: .78rem;
+      letter-spacing: .03em;
     }
 
-
-    section {
-      scroll-margin-top: 96px;
-      /* 固定ヘッダーの高さぶんずらすイメージ */
-    }
-
-    .nav {
+    .topbar-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 68px;
-      gap: 16px;
+      min-height: 34px;
+      gap: 20px;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      letter-spacing: .5px;
-      cursor: pointer;
-    }
-
-    .logo {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, var(--brand), #9ed284);
-      display: grid;
-      place-items: center;
-      color: #fff;
-      box-shadow: 0 8px 18px rgba(125, 163, 90, .35);
-      font-weight: 900;
-    }
-
-    .nav a.btn {
-      background: var(--brand);
-      color: #fff;
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-weight: 700;
-      box-shadow: 0 8px 18px rgba(125, 163, 90, .35);
-    }
-
-    .nav a.btn:hover {
-      background: var(--brand-600);
-      text-decoration: none;
-    }
-
-    .menu {
-      display: flex;
-      gap: 14px;
-      align-items: center;
-      font-weight: 600;
-    }
-
-    .menu a {
-      color: var(--fg);
-      opacity: .8;
-    }
-
-    .menu a:hover {
-      opacity: 1;
-      text-decoration: none;
-    }
-
-    /* Hero */
-    .hero {
-      position: relative;
-      isolation: isolate;
-    }
-
-    .hero-media {
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      background:
-        radial-gradient(60% 40% at 10% 10%, rgba(110, 231, 249, .25), transparent 60%),
-        radial-gradient(60% 40% at 90% 20%, rgba(245, 158, 11, .18), transparent 60%),
-        linear-gradient(180deg, var(--brand-50), rgba(255, 255, 255, 0) 55%);
-    }
-
-    .hero-img {
-      position: absolute;
-      inset: 0;
-      background-image: url('hero.jpg');
-      background-size: cover;
-      background-position: center 30%;
-      filter: saturate(110%) contrast(104%) brightness(1.05);
-      opacity: .22;
-    }
-
-
-    .hero-inner {
-      padding: 88px 0 56px;
-    }
-
-    .hero h1 {
-      font-size: clamp(28px, 5vw, 44px);
-      line-height: 1.15;
-      margin: 0 0 12px;
-    }
-
-    .hero p.lead {
-      color: var(--muted);
-      font-size: clamp(16px, 2.2vw, 18px);
-      margin: 0 0 22px;
-      max-width: 64ch;
-    }
-
-    .cta-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn-lg {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 18px;
-      border-radius: 14px;
-      background: var(--brand);
-      color: #fff;
-      font-weight: 800;
-      box-shadow: var(--shadow);
-    }
-
-    .btn-lg:hover {
-      background: var(--brand-600);
-      text-decoration: none;
-    }
-
-    .btn-ghost {
-      background: #fff;
-      color: var(--brand-600);
-      border: 1px solid var(--border);
-    }
-
-    section {
-      padding: 64px 0;
-    }
-
-    .section-title {
-      font-size: clamp(22px, 3.2vw, 30px);
-      margin: 0 0 20px;
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    .grid {
-      display: grid;
-      gap: 18px;
-    }
-
-    @media (min-width: 768px) {
-      .grid-2 {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .grid-3 {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 20px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .card h3 {
-      margin: 0 0 8px;
-      font-size: 18px;
-    }
-
-    /* Media cards */
-    .media {
-      position: relative;
-      border-radius: 16px;
-      overflow: hidden;
-      margin-bottom: 10px;
-    }
-
-    .media img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-      filter: saturate(110%) contrast(105%);
-    }
-
-    .media .badge {
-      position: absolute;
-      left: 12px;
-      top: 12px;
-      background: #fff;
-      color: #111;
-      border-radius: 999px;
-      padding: 6px 10px;
-      font-weight: 700;
-      font-size: 12px;
-      box-shadow: var(--shadow);
-    }
-
-    /* Steps */
-    .steps {
-      counter-reset: step;
-      display: grid;
-      gap: 14px;
-    }
-
-    .step {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px 16px 16px 56px;
-      position: relative;
-      box-shadow: var(--shadow);
-    }
-
-    .step::before {
-      counter-increment: step;
-      content: counter(step);
-      position: absolute;
-      left: 16px;
-      top: 16px;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: var(--brand);
-      color: #fff;
-      display: grid;
-      place-items: center;
-      font-weight: 800;
-    }
-
-    /* Contact + Map */
-    .contact {
-      display: grid;
-      gap: 16px;
-    }
-
-    @media(min-width: 900px) {
-      .contact {
-        grid-template-columns: 1.1fr .9fr;
-      }
-    }
-
-    iframe.map {
-      width: 100%;
-      height: 340px;
-      border: 0;
-      border-radius: 14px;
-      box-shadow: var(--shadow);
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 40px 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .footer-grid {
-      display: grid;
-      gap: 16px;
-    }
-
-    @media(min-width: 768px) {
-      .footer-grid {
-        grid-template-columns: 2fr 1fr;
-      }
-    }
-
-    .nowrap {
-      white-space: nowrap;
-    }
-
-    /* Recruit & Volunteer */
-    .recruit-section {
-      padding: 4rem 0;
-      background: #f8fafc;
-    }
-
-    .recruit-lead {
-      max-width: 720px;
-      margin: 0 auto 2.5rem;
-      font-size: 0.98rem;
-      line-height: 1.9;
-      color: #475569;
-    }
-
-    .recruit-grid {
-      display: grid;
-      gap: 2rem;
-    }
-
-    @media (min-width: 900px) {
-      .recruit-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    .recruit-card {
-      background: #ffffff;
-      border-radius: 24px;
-      padding: 1.75rem 1.75rem 2rem;
-      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
-      border: 1px solid #e2e8f0;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .recruit-tag {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.25rem 0.75rem;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      background: #ecfdf5;
-      color: #15803d;
-      margin-bottom: 0.5rem;
-    }
-
-    .recruit-card h3 {
-      font-size: 1.1rem;
+    .topbar p {
       margin: 0;
     }
 
-    .recruit-meta {
-      font-size: 0.85rem;
-      color: #64748b;
+    .topbar a {
+      color: var(--white);
+      font-weight: 700;
     }
 
-    .recruit-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.9rem;
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid rgba(220, 230, 220, .86);
+      background: rgba(251, 250, 245, .92);
+      backdrop-filter: blur(18px);
     }
 
-    .recruit-table th,
-    .recruit-table td {
-      padding: 0.4rem 0.3rem;
-      vertical-align: top;
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      gap: 24px;
     }
 
-    .recruit-table th {
-      width: 28%;
-      font-weight: 600;
-      color: #0f172a;
-    }
-
-    .recruit-table tr+tr th,
-    .recruit-table tr+tr td {
-      border-top: 1px solid #e2e8f0;
-    }
-
-    .recruit-cta {
-      margin-top: 1.25rem;
-      font-size: 0.85rem;
-      color: #475569;
-    }
-
-    .recruit-cta a.button {
+    .brand {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      padding: 0.55rem 1.4rem;
-      border-radius: 999px;
-      background: #16a34a;
-      color: #ffffff;
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-decoration: none;
-      margin-top: 0.5rem;
+      min-width: 0;
+      gap: 11px;
     }
 
-    .recruit-cta a.button:hover {
-      background: #15803d;
+    .brand-mark {
+      display: grid;
+      flex: 0 0 42px;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border-radius: 14px 14px 14px 5px;
+      background: var(--leaf-dark);
+      color: var(--white);
+      font-family: "Noto Serif JP", serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      box-shadow: 0 8px 18px rgba(40, 84, 59, .2);
     }
 
-    .volunteer-box {
-      margin-top: 3rem;
-      padding: 1.75rem;
-      border-radius: 24px;
-      background: #ecfeff;
-      border: 1px solid #bae6fd;
+    .brand-copy {
+      display: grid;
+      line-height: 1.15;
     }
 
-    .volunteer-box h3 {
-      margin-top: 0;
+    .brand-copy strong {
+      font-size: .98rem;
+      letter-spacing: .06em;
+      white-space: nowrap;
+    }
+
+    .brand-copy small {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: .65rem;
+      letter-spacing: .12em;
+    }
+
+    .primary-nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(13px, 2vw, 28px);
+      color: var(--ink-soft);
+      font-size: .86rem;
+      font-weight: 700;
+    }
+
+    .primary-nav > a:not(.header-cta) {
+      position: relative;
+      padding: 8px 0;
+    }
+
+    .primary-nav > a:not(.header-cta)::after {
+      position: absolute;
+      right: 0;
+      bottom: 1px;
+      left: 0;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--leaf);
+      content: "";
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform .25s ease;
+    }
+
+    .primary-nav > a:not(.header-cta):hover::after,
+    .primary-nav > a:not(.header-cta):focus-visible::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .header-contact {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--leaf-dark);
+      line-height: 1.25;
+    }
+
+    .header-contact span {
+      display: block;
+      color: var(--muted);
+      font-size: .65rem;
+      font-weight: 500;
+    }
+
+    .header-contact strong {
+      font-size: .95rem;
+      letter-spacing: .04em;
+    }
+
+    .phone-icon,
+    .link-arrow,
+    .quick-icon {
+      display: grid;
+      place-items: center;
+    }
+
+    .phone-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--mint);
       font-size: 1rem;
     }
 
-    .volunteer-box ul {
-      padding-left: 1.1rem;
-      margin: 0.6rem 0 0.6rem;
-      font-size: 0.9rem;
+    .header-cta,
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      gap: 12px;
+      padding: 12px 20px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-size: .9rem;
+      font-weight: 800;
+      line-height: 1.2;
+      transition: transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
     }
 
-    .volunteer-box li+li {
-      margin-top: 0.15rem;
+    .header-cta,
+    .btn-primary {
+      background: var(--leaf-dark);
+      color: var(--white);
+      box-shadow: 0 10px 22px rgba(40, 84, 59, .18);
     }
 
-    /* Hero の全体背景（あなたの hero.jpg を使う） */
-    .hero {
-      background: url('hero.jpg') center/cover no-repeat;
-      padding: 160px 20px 60px;
-      text-align: center;
-      color: #fff;
-      position: relative;
+    .header-cta {
+      min-height: 42px;
+      padding: 10px 17px;
+      font-size: .82rem;
     }
 
-    /* 下に薄く黒いフィルターを入れて文字を読みやすくする */
-    .hero::before {
+    .header-cta:hover,
+    .btn-primary:hover {
+      background: var(--leaf-deep);
+      box-shadow: 0 14px 28px rgba(40, 84, 59, .24);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border-color: rgba(40, 84, 59, .22);
+      background: rgba(255, 255, 255, .58);
+      color: var(--leaf-dark);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--leaf);
+      background: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-light {
+      background: var(--white);
+      color: var(--leaf-deep);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-light:hover {
+      background: var(--mint);
+      transform: translateY(-2px);
+    }
+
+    .btn-text {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--leaf-dark);
+      font-size: .9rem;
+      font-weight: 800;
+    }
+
+    .btn-text:hover .link-arrow {
+      transform: translateX(4px);
+    }
+
+    .link-arrow {
+      width: 27px;
+      height: 27px;
+      border-radius: 50%;
+      background: var(--mint-strong);
+      transition: transform .25s ease;
+    }
+
+    .nav-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--leaf-dark);
+      cursor: pointer;
+    }
+
+    .nav-toggle span,
+    .nav-toggle::before,
+    .nav-toggle::after {
+      display: block;
+      width: 17px;
+      height: 2px;
+      margin: 0 auto;
+      border-radius: 2px;
+      background: currentColor;
       content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.45);
-      /* ←濃すぎなら0.3、もっと読みやすくなら0.5 */
-      z-index: 0;
+      transition: transform .2s ease, opacity .2s ease;
     }
 
-    .hero-inner {
+    .nav-toggle::before {
+      margin-bottom: 5px;
+    }
+
+    .nav-toggle::after {
+      margin-top: 5px;
+    }
+
+    .nav-toggle[aria-expanded="true"] span {
+      opacity: 0;
+    }
+
+    .nav-toggle[aria-expanded="true"]::before {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-toggle[aria-expanded="true"]::after {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(52px, 7vw, 96px) 0 78px;
+      background:
+        radial-gradient(circle at 7% 10%, rgba(213, 232, 202, .72), transparent 24%),
+        radial-gradient(circle at 94% 34%, rgba(243, 183, 95, .16), transparent 25%),
+        var(--paper);
+    }
+
+    .hero::after {
+      position: absolute;
+      right: -180px;
+      bottom: -230px;
+      width: 480px;
+      height: 480px;
+      border: 1px solid rgba(79, 123, 88, .18);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(390px, .86fr);
+      align-items: center;
+      gap: clamp(42px, 7vw, 100px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 22px;
+      color: var(--leaf-dark);
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+
+    .eyebrow-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--coral);
+      box-shadow: 0 0 0 6px rgba(217, 109, 90, .12);
+    }
+
+    .hero h1 {
+      max-width: 700px;
+      margin: 0;
+      color: var(--leaf-deep);
+      font-family: "Noto Serif JP", Georgia, serif;
+      font-size: clamp(2.7rem, 5.2vw, 5.1rem);
+      font-weight: 800;
+      letter-spacing: .04em;
+      line-height: 1.25;
+    }
+
+    .hero h1 em {
+      color: var(--leaf);
+      font-style: normal;
+    }
+
+    .hero-lead {
+      max-width: 610px;
+      margin: 26px 0 32px;
+      color: var(--ink-soft);
+      font-size: clamp(1rem, 1.45vw, 1.15rem);
+      line-height: 2;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-caption {
+      margin: 23px 0 0;
+      color: var(--muted);
+      font-size: .79rem;
+    }
+
+    .hero-caption::before {
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      margin: 0 11px 4px 0;
+      background: var(--leaf);
+      content: "";
+    }
+
+    .hero-visual {
+      position: relative;
+      max-width: 520px;
+      margin-left: auto;
+    }
+
+    .hero-photo-wrap {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: .91;
+      border-radius: 46% 46% 46% 18%;
+      background: var(--mint-strong);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .hero-photo-wrap::after {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(150deg, rgba(40, 84, 59, .02), rgba(40, 84, 59, .2));
+      content: "";
+    }
+
+    .hero-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero-sticker {
+      position: absolute;
+      top: -19px;
+      right: 22px;
+      z-index: 2;
+      display: grid;
+      width: 92px;
+      height: 92px;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, .8);
+      border-radius: 50%;
+      background: var(--sun);
+      color: var(--leaf-deep);
+      font-size: .72rem;
+      font-weight: 900;
+      line-height: 1.45;
+      text-align: center;
+      transform: rotate(8deg);
+    }
+
+    .hero-card {
+      position: absolute;
+      right: -22px;
+      bottom: 34px;
+      z-index: 2;
+      width: min(245px, 58%);
+      padding: 18px 19px;
+      border: 1px solid rgba(255, 255, 255, .8);
+      border-radius: 19px;
+      background: rgba(255, 255, 255, .92);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-card-label {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--coral);
+      font-size: .68rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+    }
+
+    .hero-card strong {
+      display: block;
+      color: var(--leaf-deep);
+      font-family: "Noto Serif JP", serif;
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+
+    .hero-card small {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: .7rem;
+    }
+
+    .quick-actions {
+      position: relative;
+      z-index: 2;
+      background: var(--leaf-deep);
+      color: var(--white);
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .quick-item {
+      display: flex;
+      align-items: center;
+      min-height: 104px;
+      gap: 16px;
+      padding: 21px clamp(18px, 3vw, 34px);
+      border-right: 1px solid rgba(255, 255, 255, .15);
+      transition: background .25s ease;
+    }
+
+    .quick-item:first-child {
+      padding-left: 0;
+    }
+
+    .quick-item:last-child {
+      border-right: 0;
+    }
+
+    .quick-item:hover {
+      background: rgba(255, 255, 255, .07);
+    }
+
+    .quick-icon {
+      flex: 0 0 43px;
+      width: 43px;
+      height: 43px;
+      border: 1px solid rgba(255, 255, 255, .25);
+      border-radius: 50%;
+      color: var(--sun);
+      font-size: .76rem;
+      font-weight: 900;
+      letter-spacing: .04em;
+    }
+
+    .quick-item strong {
+      display: block;
+      font-size: .95rem;
+      line-height: 1.45;
+    }
+
+    .quick-item small {
+      display: block;
+      margin-top: 3px;
+      color: rgba(255, 255, 255, .65);
+      font-size: .72rem;
+    }
+
+    .quick-item .link-arrow {
+      margin-left: auto;
+      background: rgba(255, 255, 255, .12);
+      color: var(--white);
+    }
+
+    .section {
+      position: relative;
+      padding: clamp(82px, 10vw, 138px) 0;
+    }
+
+    .section-soft {
+      background: var(--paper-warm);
+    }
+
+    .section-mint {
+      background: var(--mint);
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 42px;
+    }
+
+    .section-kicker {
+      margin: 0 0 12px;
+      color: var(--coral);
+      font-size: .74rem;
+      font-weight: 900;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .section-kicker.light {
+      color: var(--sun);
+    }
+
+    .section-title {
+      max-width: 700px;
+      margin: 0;
+      color: var(--leaf-deep);
+      font-family: "Noto Serif JP", Georgia, serif;
+      font-size: clamp(2rem, 3.5vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: .04em;
+      line-height: 1.4;
+    }
+
+    .section-title.light {
+      color: var(--white);
+    }
+
+    .section-lead {
+      max-width: 580px;
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--white);
+      box-shadow: 0 7px 20px rgba(23, 61, 42, .035);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .service-card:hover {
+      box-shadow: var(--shadow-sm);
+      transform: translateY(-5px);
+    }
+
+    .service-image {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1.16;
+      background: var(--mint);
+    }
+
+    .service-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .45s ease;
+    }
+
+    .service-card:hover .service-image img {
+      transform: scale(1.04);
+    }
+
+    .service-number {
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      display: grid;
+      width: 32px;
+      height: 32px;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .9);
+      color: var(--leaf-dark);
+      font-size: .7rem;
+      font-weight: 900;
+    }
+
+    .service-body {
+      padding: 20px 19px 22px;
+    }
+
+    .service-body h3 {
+      margin: 0 0 8px;
+      color: var(--leaf-deep);
+      font-size: 1.05rem;
+      letter-spacing: .04em;
+    }
+
+    .service-body p {
+      min-height: 7.5em;
+      margin: 0;
+      color: var(--muted);
+      font-size: .82rem;
+      line-height: 1.85;
+    }
+
+    .service-note {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 18px;
+      margin-top: 20px;
+      padding: 20px 24px;
+      border-radius: var(--radius-md);
+      background: var(--leaf-dark);
+      color: var(--white);
+    }
+
+    .service-note-mark {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .12);
+      color: var(--sun);
+      font-size: 1.1rem;
+    }
+
+    .service-note strong {
+      display: block;
+      font-size: .95rem;
+    }
+
+    .service-note span {
+      display: block;
+      margin-top: 2px;
+      color: rgba(255, 255, 255, .72);
+      font-size: .76rem;
+    }
+
+    .service-note .btn-text {
+      color: var(--white);
+      white-space: nowrap;
+    }
+
+    .service-note .link-arrow {
+      background: rgba(255, 255, 255, .16);
+    }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .support-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 288px;
+      padding: clamp(28px, 4vw, 44px);
+      border: 1px solid rgba(79, 123, 88, .16);
+      border-radius: var(--radius-lg);
+      background: var(--white);
+    }
+
+    .support-card::after {
+      position: absolute;
+      right: -58px;
+      bottom: -90px;
+      width: 220px;
+      height: 220px;
+      border: 1px solid rgba(79, 123, 88, .16);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .support-card.recruit-card-accent {
+      background: var(--leaf-dark);
+      color: var(--white);
+    }
+
+    .support-card.recruit-card-accent::after {
+      border-color: rgba(255, 255, 255, .15);
+    }
+
+    .support-label {
+      display: inline-flex;
+      align-items: center;
+      min-height: 29px;
+      margin-bottom: 23px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: var(--mint);
+      color: var(--leaf-dark);
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: .06em;
+    }
+
+    .recruit-card-accent .support-label {
+      background: rgba(255, 255, 255, .13);
+      color: var(--sun);
+    }
+
+    .support-card h3 {
+      position: relative;
+      z-index: 1;
+      max-width: 440px;
+      margin: 0 0 12px;
+      font-family: "Noto Serif JP", serif;
+      font-size: 1.55rem;
+      line-height: 1.55;
+    }
+
+    .support-card p {
+      position: relative;
+      z-index: 1;
+      max-width: 455px;
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: .86rem;
+    }
+
+    .recruit-card-accent p {
+      color: rgba(255, 255, 255, .72);
+    }
+
+    .support-card .btn-text {
       position: relative;
       z-index: 1;
     }
 
-    /* 上段メッセージ */
-    .hero-eyecatch {
-      font-size: 18px;
-      opacity: 0.9;
-      margin-bottom: 10px;
+    .recruit-card-accent .btn-text {
+      color: var(--white);
     }
 
-    .hero-title {
-      font-size: 32px;
-      font-weight: 700;
-      margin: 10px 0 20px;
-    }
-
-    .hero-desc {
-      font-size: 18px;
-      line-height: 1.7;
-      margin-bottom: 30px;
-    }
-
-    /* ボタン */
-    .hero-btn {
-      display: inline-block;
-      padding: 14px 28px;
-      background: #7da35a;
-      border-radius: 6px;
-      color: #fff;
-      font-weight: 600;
-    }
-
-    /* 下段：採用帯 */
-    .hero-recruit-band {
-      background: rgba(255, 255, 255, 0.92);
-      padding: 18px 20px;
-      margin-top: 40px;
-      border-radius: 8px;
-      display: inline-flex;
-      align-items: center;
-      gap: 20px;
-      z-index: 2;
-      position: relative;
-    }
-
-    .band-text {
-      color: #333;
-      font-size: 16px;
-    }
-
-    .band-button {
-      background: #7da35a;
-      padding: 8px 18px;
-      border-radius: 6px;
-      color: #fff;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    /* ===== Services section (主なサービス) をより見栄えよく ===== */
-
-    #services {
-      padding: 80px 0;
-      background: #f8fafc;
-    }
-
-    #services .section-title {
-      margin-bottom: 32px;
-    }
-
-    /* グリッド配置（PCで2列、スマホで1列） */
-    #services .grid {
-      display: grid;
-      gap: 24px;
-    }
-
-    @media (min-width: 900px) {
-      #services .grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    /* カード本体 */
-    #services .card {
-      background: #ffffff;
-      border-radius: 24px;
+    .flow-section {
       overflow: hidden;
-      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
-      border: 1px solid #e2e8f0;
+    }
+
+    .flow-panel {
+      position: relative;
+      padding: clamp(28px, 5vw, 52px);
+      border-radius: var(--radius-lg);
+      background: var(--mint);
+    }
+
+    .flow-panel::before {
+      position: absolute;
+      top: 32px;
+      right: 40px;
+      width: 110px;
+      height: 110px;
+      border: 1px solid rgba(79, 123, 88, .18);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .flow-panel .section-head {
+      position: relative;
+      margin-bottom: 34px;
+    }
+
+    .flow-steps {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+
+    .flow-step {
+      position: relative;
+      padding: 0 22px 0 0;
+      border-right: 1px solid rgba(79, 123, 88, .23);
+    }
+
+    .flow-step:last-child {
+      border-right: 0;
+    }
+
+    .flow-step-number {
+      display: block;
+      margin-bottom: 14px;
+      color: var(--coral);
+      font-family: Georgia, serif;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .flow-step h3 {
+      margin: 0 0 8px;
+      color: var(--leaf-deep);
+      font-size: 1rem;
+    }
+
+    .flow-step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    .recruit-section {
+      overflow: hidden;
+      background: var(--leaf-deep);
+      color: var(--white);
+    }
+
+    .recruit-top {
+      display: grid;
+      grid-template-columns: minmax(0, .94fr) minmax(360px, .8fr);
+      align-items: center;
+      gap: clamp(40px, 8vw, 110px);
+      margin-bottom: 54px;
+    }
+
+    .recruit-copy .section-lead {
+      color: rgba(255, 255, 255, .72);
+    }
+
+    .recruit-visual {
+      position: relative;
+      overflow: visible;
+    }
+
+    .recruit-visual img {
+      width: 100%;
+      aspect-ratio: 1.2;
+      object-fit: cover;
+      border-radius: 22px 86px 22px 22px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, .18);
+    }
+
+    .recruit-visual-note {
+      position: absolute;
+      right: -22px;
+      bottom: -22px;
+      max-width: 205px;
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: var(--sun);
+      color: var(--leaf-deep);
+      font-size: .79rem;
+      font-weight: 800;
+      line-height: 1.6;
+      box-shadow: var(--shadow-sm);
+      transform: rotate(-3deg);
+    }
+
+    .recruit-benefits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 27px;
+    }
+
+    .benefit-pill {
+      padding: 8px 13px;
+      border: 1px solid rgba(255, 255, 255, .22);
+      border-radius: 999px;
+      color: rgba(255, 255, 255, .86);
+      font-size: .75rem;
+    }
+
+    .job-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .job-card {
       display: flex;
       flex-direction: column;
-      transition: transform 0.18s ease-out, box-shadow 0.18s ease-out;
+      padding: clamp(25px, 4vw, 36px);
+      border: 1px solid rgba(255, 255, 255, .2);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, .08);
     }
 
-    #services .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 24px 55px rgba(15, 23, 42, 0.10);
-    }
-
-    /* 画像まわり（アスペクト比固定＋バッジ） */
-    #services .media {
-      position: relative;
-      aspect-ratio: 4 / 3;
+    .job-photo {
       overflow: hidden;
+      margin: -14px -14px 20px;
+      aspect-ratio: 2.2;
+      border-radius: 12px;
     }
 
-    #services .media img {
+    .job-photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
-      transform: scale(1.02);
-      transition: transform 0.25s ease-out;
     }
 
-    #services .card:hover .media img {
-      transform: scale(1.06);
-    }
-
-    /* 画像左下のラベル */
-    #services .badge {
-      position: absolute;
-      left: 16px;
-      top: 16px;
-      /* 左上に配置（bottom ではなく top） */
-      bottom: auto;
-      padding: 4px 12px;
+    .job-tag {
+      align-self: flex-start;
+      margin-bottom: 18px;
+      padding: 6px 11px;
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.86);
-      color: #f9fafb;
-      font-size: 0.8rem;
-      font-weight: 600;
+      background: var(--sun);
+      color: var(--leaf-deep);
+      font-size: .7rem;
+      font-weight: 900;
+    }
 
-      /* ここからが “おかしな縦長” を直すための上書き */
-      height: auto;
-      line-height: 1.4;
+    .job-card h3 {
+      min-height: 3em;
+      margin: 0 0 13px;
+      font-family: "Noto Serif JP", serif;
+      font-size: 1.28rem;
+      line-height: 1.55;
+    }
+
+    .job-card > p {
+      min-height: 3.6em;
+      margin: 0 0 20px;
+      color: rgba(255, 255, 255, .72);
+      font-size: .82rem;
+    }
+
+    .job-list {
+      display: grid;
+      gap: 9px;
+      margin: 0 0 26px;
+      padding: 0;
+      list-style: none;
+      color: rgba(255, 255, 255, .84);
+      font-size: .79rem;
+    }
+
+    .job-list li {
+      position: relative;
+      padding-left: 19px;
+    }
+
+    .job-list li::before {
+      position: absolute;
+      top: .75em;
+      left: 0;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--sun);
+      content: "";
+      transform: translateY(-50%);
+    }
+
+    .job-card .btn-light {
+      align-self: flex-start;
+      margin-top: auto;
+    }
+
+    .volunteer-row {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 24px;
+      margin-top: 18px;
+      padding: 19px 24px;
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, .045);
+    }
+
+    .volunteer-row img {
+      width: 66px;
+      height: 66px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .volunteer-row strong {
+      display: block;
+      margin-bottom: 3px;
+      font-size: .94rem;
+    }
+
+    .volunteer-row p {
+      margin: 0;
+      color: rgba(255, 255, 255, .65);
+      font-size: .76rem;
+    }
+
+    .volunteer-row .btn-text {
+      color: var(--sun);
+      white-space: nowrap;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(300px, .85fr);
+      align-items: center;
+      gap: clamp(38px, 8vw, 110px);
+    }
+
+    .about-copy p {
+      max-width: 610px;
+      color: var(--ink-soft);
+      font-size: .95rem;
+    }
+
+    .about-signature {
       display: inline-flex;
       align-items: center;
-      writing-mode: horizontal-tb;
-      /* 縦書きになっていた場合に強制的に横書きに戻す */
+      gap: 12px;
+      margin-top: 10px;
+      color: var(--leaf-dark);
+      font-family: "Noto Serif JP", serif;
+      font-weight: 800;
     }
 
-    /* タイトル & 本文 */
-    #services .card h3 {
-      margin: 16px 20px 8px;
-      font-size: 1.1rem;
-    }
-
-    #services .card p {
-      margin: 0 20px 20px 20px;
-      font-size: 0.94rem;
-      line-height: 1.8;
-      color: #475569;
-    }
-
-    /* 採用セクションの画像レイアウト */
-    .recruit-visual,
-    .volunteer-visual {
-      margin-bottom: 16px;
-      border-radius: 18px;
-      overflow: hidden;
-    }
-
-    .recruit-visual img,
-    .volunteer-visual img {
-      width: 100%;
-      display: block;
-    }
-
-    /*------------------------------------
-  全体の余白・見出し・画像などの統一デザイン調整
-------------------------------------*/
-
-    /* セクションの上下余白を統一 */
-    section {
-      padding: 80px 0;
-    }
-
-    /* 見出し（h2）を統一スタイルに */
-    .section-title {
-      font-size: 2rem;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 40px;
-      position: relative;
-      padding-bottom: 12px;
-    }
-
-    .section-title::after {
+    .about-signature::before {
+      width: 36px;
+      height: 1px;
+      background: var(--coral);
       content: "";
-      width: 70px;
-      height: 4px;
-      background: var(--brand-600);
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 36px;
+    }
+
+    .stat {
+      padding: 17px 15px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: var(--white);
+    }
+
+    .stat strong {
       display: block;
-      margin: 12px auto 0;
-      border-radius: 4px;
+      color: var(--leaf-dark);
+      font-family: Georgia, serif;
+      font-size: 1.8rem;
+      line-height: 1.2;
     }
 
-    /* h3 デザイン統一 */
-    h3 {
-      margin: 20px 0 12px;
-      font-size: 1.35rem;
-      font-weight: 600;
-      line-height: 1.5;
+    .stat strong small {
+      font-family: "Noto Sans JP", sans-serif;
+      font-size: .72rem;
     }
 
-    /* 全画像の角丸と影を統一 */
-    .card img,
-    .recruit-visual img,
-    .volunteer-visual img {
-      border-radius: 18px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    .stat span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: .7rem;
+      line-height: 1.4;
     }
 
-    /* セクション間のコンテナ余白補強 */
-    .container>p,
-    .container>div,
-    .container>table {
-      margin-bottom: 32px;
+    .about-photo {
+      position: relative;
+      overflow: hidden;
+      padding: 13px;
+      border-radius: 28px;
+      background: var(--mint);
+      transform: rotate(2deg);
     }
 
-    /* スマホ最適化 */
-    @media (max-width: 768px) {
-
-      /* ヘッダー：スマホ対応 */
-      .menu a:not(.btn) {
-        display: none;
-      }
-
-      .nav {
-        height: 56px;
-      }
-
-      .brand>div:last-child {
-        font-size: 0.85rem;
-      }
-
-      .section-title {
-        font-size: 1.6rem;
-        margin-bottom: 32px;
-      }
-
-      h3 {
-        font-size: 1.25rem;
-      }
-
-      section {
-        padding: 60px 0;
-      }
-
-      .recruit-card,
-      .volunteer-box {
-        margin-bottom: 48px;
-      }
-
-      .recruit-card {
-        overflow: visible;
-      }
-
-      /* 右端切れ防止 */
-      #recruit,
-      #recruit * {
-        max-width: 100%;
-      }
-
-      .recruit-visual img {
-        width: 100%;
-        height: auto;
-      }
-
-      /* 採用テーブルを縦積み化 */
-      .table-scroll {
-        overflow: visible;
-        padding: 0;
-        margin: 0;
-      }
-
-      .recruit-table,
-      .recruit-table tbody,
-      .recruit-table tr,
-      .recruit-table th,
-      .recruit-table td {
-        display: block;
-        width: 100%;
-      }
-
-      .recruit-table {
-        min-width: 0;
-      }
-
-      .recruit-table tr {
-        border-top: 1px solid var(--border);
-        padding: 12px 0;
-      }
-
-      .recruit-table tr:first-child {
-        border-top: 0;
-      }
-
-      .recruit-table th {
-        font-weight: 700;
-        padding: 0 0 4px 0;
-        color: var(--brand-600);
-        font-size: 0.85rem;
-      }
-
-      .recruit-table td {
-        padding: 0;
-        word-break: break-word;
-      }
-
-      /* スマホでロゴのタップを最優先にする */
-      .brand {
-        position: relative;
-        z-index: 9999;
-        pointer-events: auto;
-      }
-
-      header,
-      .nav {
-        pointer-events: auto;
-      }
-
-      /* 疑似要素がタップを奪うのを防止 */
-      header::before,
-      header::after,
-      .nav::before,
-      .nav::after,
-      .hero::before,
-      .hero::after {
-        pointer-events: none;
-      }
-
-      /* 右下固定の「↑戻る」ボタン */
-      .back-to-top {
-        position: fixed;
-        right: 16px;
-        bottom: 16px;
-        width: 48px;
-        height: 48px;
-        border-radius: 999px;
-        border: none;
-        background: var(--brand);
-        color: #fff;
-        font-size: 18px;
-        font-weight: 800;
-        box-shadow: 0 10px 24px rgba(0, 0, 0, .18);
-        z-index: 99999;
-        display: none;
-        cursor: pointer;
-      }
+    .about-photo::before {
+      position: absolute;
+      top: 0;
+      left: 20%;
+      width: 60%;
+      height: 1px;
+      background: var(--coral);
+      content: "";
     }
 
-    /* --- Access Section --- */
+    .about-photo img {
+      width: 100%;
+      aspect-ratio: 1.15;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
     .access-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      margin-top: 30px;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 20px;
     }
 
     .access-card {
-      background: #fff;
-      border-radius: 16px;
-      padding: 30px;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+      padding: clamp(25px, 4vw, 38px);
+      border-radius: var(--radius-lg);
+      background: var(--white);
+      box-shadow: var(--shadow-sm);
     }
 
-    .info-card ul {
-      padding: 0;
+    .access-card h3 {
+      margin: 0 0 22px;
+      color: var(--leaf-deep);
+      font-family: "Noto Serif JP", serif;
+      font-size: 1.35rem;
+    }
+
+    .info-list {
+      display: grid;
+      gap: 17px;
       margin: 0;
-      list-style: none;
     }
 
-    .info-card li {
-      margin-bottom: 14px;
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      font-size: 16px;
-      line-height: 1.6;
+    .info-item {
+      display: grid;
+      grid-template-columns: 31px 1fr;
+      gap: 11px;
+      margin: 0;
     }
 
-    .info-card a {
-      color: var(--brand-600);
+    .info-item dt {
+      color: var(--coral);
+      font-size: .82rem;
+      font-weight: 900;
     }
 
-    .icon {
-      font-size: 20px;
-      width: 24px;
-      display: inline-block;
+    .info-item dd {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: .81rem;
+    }
+
+    .info-item dd a {
+      color: var(--leaf-dark);
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-color: var(--mint-strong);
+      text-underline-offset: 3px;
+    }
+
+    .access-note {
+      margin: 24px 0 0;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .72rem;
+    }
+
+    .map-card {
+      overflow: hidden;
+      padding: 11px;
+      background: var(--mint);
     }
 
     .map-card iframe {
-      border-radius: 12px;
-      height: 300px;
+      display: block;
       width: 100%;
+      min-height: 390px;
+      border: 0;
+      border-radius: 19px;
     }
 
-    /* スマホ対応 */
-    @media (max-width: 768px) {
-      .access-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .map-card iframe {
-        height: 260px;
-      }
+    .contact-section {
+      background: var(--paper-warm);
     }
 
-    /* Contact Form */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .78fr 1.22fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .contact-intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: clamp(29px, 5vw, 52px);
+      border-radius: var(--radius-lg);
+      background: var(--leaf-deep);
+      color: var(--white);
+    }
+
+    .contact-intro .section-title {
+      font-size: clamp(1.9rem, 3.2vw, 2.9rem);
+    }
+
+    .contact-intro p {
+      margin: 17px 0 0;
+      color: rgba(255, 255, 255, .72);
+      font-size: .84rem;
+    }
+
+    .contact-phone {
+      display: block;
+      margin-top: 35px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, .2);
+    }
+
+    .contact-phone span {
+      display: block;
+      color: var(--sun);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+    }
+
+    .contact-phone strong {
+      display: block;
+      margin-top: 4px;
+      font-size: clamp(1.65rem, 3vw, 2.2rem);
+      letter-spacing: .04em;
+      line-height: 1.3;
+    }
+
+    .contact-phone small {
+      display: block;
+      margin-top: 4px;
+      color: rgba(255, 255, 255, .6);
+      font-size: .72rem;
+    }
+
+    .contact-form-card {
+      padding: clamp(25px, 4vw, 42px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--white);
+    }
+
+    .contact-form-card h3 {
+      margin: 0 0 5px;
+      color: var(--leaf-deep);
+      font-family: "Noto Serif JP", serif;
+      font-size: 1.35rem;
+    }
+
+    .contact-form-card > p {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: .76rem;
+    }
+
     .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+      display: grid;
+      gap: 14px;
     }
 
-    .form-group {
-      display: flex;
-      flex-direction: column;
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .form-field {
+      display: grid;
       gap: 6px;
     }
 
-    .form-group label {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--fg);
+    .form-field label {
+      color: var(--ink-soft);
+      font-size: .76rem;
+      font-weight: 800;
     }
 
-    .form-group label .optional {
-      font-weight: 400;
+    .optional {
+      margin-left: 5px;
       color: var(--muted);
-      font-size: 0.8rem;
-      margin-left: 6px;
+      font-size: .67rem;
+      font-weight: 500;
     }
 
-    .form-group input,
-    .form-group textarea {
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
       width: 100%;
-      padding: 12px 14px;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      font-size: 1rem;
-      font-family: inherit;
-      background: #fff;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      box-sizing: border-box;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: #fcfdf9;
+      color: var(--ink);
+      font-size: .83rem;
+      transition: border-color .2s ease, box-shadow .2s ease;
     }
 
-    .form-group input:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--brand);
-      box-shadow: 0 0 0 3px rgba(125, 163, 90, 0.15);
+    .form-field input,
+    .form-field select {
+      min-height: 46px;
+      padding: 10px 13px;
     }
 
-    .form-group textarea {
-      min-height: 140px;
+    .form-field textarea {
+      min-height: 130px;
+      padding: 12px 13px;
       resize: vertical;
     }
 
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+      color: #9aa9a0;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      border-color: var(--leaf);
+      box-shadow: 0 0 0 4px rgba(79, 123, 88, .12);
+      outline: 0;
+    }
+
     .form-submit {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 14px 28px;
-      background: var(--brand);
-      color: #fff;
-      font-size: 1rem;
-      font-weight: 700;
-      border: none;
-      border-radius: 12px;
+      justify-self: start;
+      min-height: 50px;
+      margin-top: 3px;
+      padding: 12px 25px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--coral);
+      color: var(--white);
       cursor: pointer;
-      box-shadow: 0 8px 20px rgba(125, 163, 90, 0.3);
-      transition: background 0.2s, transform 0.15s;
+      font-size: .84rem;
+      font-weight: 900;
+      box-shadow: 0 9px 20px rgba(217, 109, 90, .2);
+      transition: transform .25s ease, background .25s ease;
     }
 
     .form-submit:hover {
-      background: var(--brand-600);
+      background: #bd5545;
       transform: translateY(-2px);
     }
 
-    .form-submit:active {
-      transform: translateY(0);
+    .form-footnote {
+      margin: -3px 0 0;
+      color: var(--muted);
+      font-size: .67rem;
     }
 
-    @media (max-width: 768px) {
+    .site-footer {
+      padding: 45px 0 27px;
+      background: var(--leaf-deep);
+      color: var(--white);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr auto;
+      gap: 35px;
+      padding-bottom: 34px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+    }
+
+    .footer-brand .brand-mark {
+      flex-basis: 38px;
+      width: 38px;
+      height: 38px;
+      background: rgba(255, 255, 255, .14);
+      box-shadow: none;
+    }
+
+    .footer-brand strong {
+      display: block;
+      margin-top: 2px;
+      font-size: .95rem;
+    }
+
+    .footer-brand p {
+      margin: 9px 0 0;
+      color: rgba(255, 255, 255, .58);
+      font-size: .72rem;
+      line-height: 1.7;
+    }
+
+    .footer-links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 9px 20px;
+      align-content: start;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: rgba(255, 255, 255, .72);
+      font-size: .76rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--sun);
+    }
+
+    .footer-cta {
+      align-self: start;
+      white-space: nowrap;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, .16);
+      color: rgba(255, 255, 255, .5);
+      font-size: .68rem;
+    }
+
+    .back-to-top {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 40;
+      display: grid;
+      width: 48px;
+      height: 48px;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, .7);
+      border-radius: 50%;
+      background: var(--leaf-dark);
+      color: var(--white);
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(12px);
+      visibility: hidden;
+      transition: opacity .25s ease, transform .25s ease, visibility .25s ease, background .25s ease;
+    }
+
+    .back-to-top:hover {
+      background: var(--leaf-deep);
+    }
+
+    .back-to-top.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+      visibility: visible;
+    }
+
+    .mobile-action-bar {
+      display: none;
+    }
+
+    @media (max-width: 1060px) {
+      .header-contact {
+        display: none;
+      }
+
+      .primary-nav {
+        gap: 17px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .service-body p {
+        min-height: 0;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .container {
+        width: min(var(--max), calc(100% - 36px));
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      .primary-nav {
+        position: absolute;
+        top: calc(100% + 1px);
+        right: 18px;
+        left: 18px;
+        display: grid;
+        gap: 0;
+        padding: 9px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: rgba(251, 250, 245, .98);
+        box-shadow: var(--shadow-lg);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-8px);
+        visibility: hidden;
+        transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+      }
+
+      .primary-nav.is-open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+        visibility: visible;
+      }
+
+      .primary-nav > a:not(.header-cta) {
+        padding: 13px 14px;
+        border-radius: 10px;
+      }
+
+      .primary-nav > a:not(.header-cta):hover {
+        background: var(--mint);
+      }
+
+      .primary-nav > a:not(.header-cta)::after {
+        display: none;
+      }
+
+      .header-cta {
+        margin-top: 5px;
+      }
+
+      .hero-grid,
+      .recruit-top,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy {
+        max-width: 700px;
+      }
+
+      .hero-visual {
+        width: min(100%, 570px);
+        margin: 22px auto 0;
+      }
+
+      .recruit-top {
+        gap: 46px;
+      }
+
+      .recruit-visual {
+        width: min(100%, 570px);
+        margin: 0 auto;
+      }
+
+      .about-photo {
+        width: min(100%, 560px);
+        margin: 0 auto;
+      }
+
+      .access-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .map-card {
+        min-height: auto;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1.4fr 1fr;
+      }
+
+      .footer-cta {
+        grid-column: 1 / -1;
+        justify-self: start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      html {
+        scroll-padding-top: 82px;
+      }
+
+      .container {
+        width: min(var(--max), calc(100% - 30px));
+      }
+
+      .topbar-inner {
+        justify-content: center;
+        min-height: 30px;
+        font-size: .68rem;
+        text-align: center;
+      }
+
+      .topbar-inner p:last-child {
+        display: none;
+      }
+
+      .header-inner {
+        min-height: 66px;
+      }
+
+      .brand-mark {
+        flex-basis: 38px;
+        width: 38px;
+        height: 38px;
+        border-radius: 12px 12px 12px 5px;
+        font-size: 1.1rem;
+      }
+
+      .brand-copy strong {
+        font-size: .86rem;
+      }
+
+      .brand-copy small {
+        font-size: .58rem;
+      }
+
+      .hero {
+        padding: 46px 0 62px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.35rem, 12vw, 3.6rem);
+        letter-spacing: .02em;
+      }
+
+      .hero-lead {
+        margin: 20px 0 25px;
+        font-size: .91rem;
+      }
+
+      .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .hero-visual {
+        width: calc(100% - 10px);
+        margin-top: 19px;
+      }
+
+      .hero-card {
+        right: -7px;
+        bottom: 18px;
+        width: 195px;
+        padding: 14px;
+      }
+
+      .hero-card strong {
+        font-size: .83rem;
+      }
+
+      .hero-card small {
+        font-size: .63rem;
+      }
+
+      .hero-sticker {
+        top: -12px;
+        right: 8px;
+        width: 74px;
+        height: 74px;
+        font-size: .61rem;
+      }
+
+      .quick-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-item,
+      .quick-item:first-child {
+        min-height: 74px;
+        padding: 13px 0;
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, .15);
+      }
+
+      .quick-item:last-child {
+        border-bottom: 0;
+      }
+
+      .quick-item strong {
+        font-size: .86rem;
+      }
+
+      .quick-item small {
+        font-size: .67rem;
+      }
+
+      .quick-item .link-arrow {
+        width: 25px;
+        height: 25px;
+      }
+
+      .section {
+        padding: 74px 0;
+      }
+
+      .section-head {
+        display: block;
+        margin-bottom: 30px;
+      }
+
+      .section-head .btn-text {
+        margin-top: 18px;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .section-lead {
+        font-size: .83rem;
+      }
+
+      .service-grid,
+      .support-grid,
+      .job-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-body {
+        padding: 17px 17px 20px;
+      }
+
+      .service-body h3 {
+        font-size: 1rem;
+      }
+
+      .service-body p {
+        font-size: .79rem;
+      }
+
+      .service-note {
+        grid-template-columns: auto 1fr;
+        gap: 13px;
+        padding: 17px;
+      }
+
+      .service-note .btn-text {
+        grid-column: 2;
+        justify-self: start;
+      }
+
+      .support-card {
+        min-height: 0;
+        padding: 27px 24px 30px;
+      }
+
+      .support-card h3 {
+        font-size: 1.25rem;
+      }
+
+      .flow-panel {
+        padding: 26px 20px;
+      }
+
+      .flow-panel::before {
+        top: 18px;
+        right: 18px;
+      }
+
+      .flow-steps {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .flow-step {
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        gap: 12px;
+        padding: 0 0 20px;
+        border-right: 0;
+        border-bottom: 1px solid rgba(79, 123, 88, .2);
+      }
+
+      .flow-step + .flow-step {
+        padding-top: 20px;
+      }
+
+      .flow-step:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+
+      .flow-step-number {
+        grid-row: 1 / span 2;
+        margin: 0;
+        font-size: 1.6rem;
+      }
+
+      .flow-step h3 {
+        margin: 0;
+      }
+
+      .flow-step p {
+        grid-column: 2;
+      }
+
+      .recruit-top {
+        gap: 38px;
+        margin-bottom: 38px;
+      }
+
+      .recruit-benefits {
+        gap: 7px;
+      }
+
+      .benefit-pill {
+        padding: 7px 10px;
+        font-size: .68rem;
+      }
+
+      .recruit-visual-note {
+        right: -4px;
+        bottom: -15px;
+        max-width: 174px;
+        padding: 12px 13px;
+        font-size: .7rem;
+      }
+
+      .job-card {
+        padding: 24px 21px;
+      }
+
+      .job-card h3,
+      .job-card > p {
+        min-height: 0;
+      }
+
+      .volunteer-row {
+        grid-template-columns: auto 1fr;
+        gap: 13px;
+        padding: 15px;
+      }
+
+      .volunteer-row img {
+        width: 54px;
+        height: 54px;
+      }
+
+      .volunteer-row .btn-text {
+        grid-column: 2;
+        justify-self: start;
+      }
+
+      .about-stats {
+        gap: 7px;
+        margin-top: 28px;
+      }
+
+      .stat {
+        padding: 13px 10px;
+      }
+
+      .stat strong {
+        font-size: 1.35rem;
+      }
+
+      .stat span {
+        font-size: .62rem;
+      }
+
+      .access-card {
+        padding: 24px 20px;
+      }
+
+      .map-card {
+        padding: 7px;
+      }
+
+      .map-card iframe {
+        min-height: 280px;
+      }
+
+      .contact-intro,
+      .contact-form-card {
+        padding: 25px 20px;
+      }
+
+      .contact-phone {
+        margin-top: 28px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
       .form-submit {
         width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .footer-cta {
+        grid-column: auto;
+      }
+
+      .footer-bottom {
+        display: block;
+      }
+
+      .footer-bottom span {
+        display: block;
+        margin-top: 6px;
+      }
+
+      .back-to-top {
+        right: 16px;
+        bottom: calc(78px + env(safe-area-inset-bottom));
+        width: 44px;
+        height: 44px;
+      }
+
+      .mobile-action-bar {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 35;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+        gap: 8px;
+        border-top: 1px solid rgba(220, 230, 220, .9);
+        background: rgba(251, 250, 245, .96);
+        box-shadow: 0 -8px 24px rgba(23, 61, 42, .08);
+        backdrop-filter: blur(14px);
+      }
+
+      .mobile-action-bar a {
+        display: flex;
+        min-height: 42px;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        border-radius: 10px;
+        font-size: .76rem;
+        font-weight: 900;
+      }
+
+      .mobile-action-bar a:first-child {
+        background: var(--leaf-dark);
+        color: var(--white);
+      }
+
+      .mobile-action-bar a:last-child {
+        background: var(--coral);
+        color: var(--white);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
       }
     }
   </style>
 </head>
 
-<body>
-  <header>
-    <div class="container nav">
-      <a class="brand" href="#top" aria-label="ページ上部へ">
-        <div class="logo" aria-hidden="true">W</div>
-        <div>サポートセンターわかくさ</div>
+<body id="top">
+  <a class="skip-link" href="#main-content">本文へスキップ</a>
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <p>大阪市住之江区の障がい福祉サービス</p>
+      <p><a href="tel:0666811211">お電話でのご相談 06-6681-1211</a>　平日 10:00〜17:00</p>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="サポートセンターわかくさ ホーム">
+        <span class="brand-mark" aria-hidden="true">W</span>
+        <span class="brand-copy">
+          <strong>サポートセンターわかくさ</strong>
+          <small>SUPPORT CENTER WAKAKUSA</small>
+        </span>
       </a>
-      <nav class="menu" aria-label="メインメニュー">
+
+      <nav class="primary-nav" id="primary-nav" aria-label="メインメニュー">
         <a href="#services">サービス</a>
-        <a href="#recruit">採用情報</a> <!-- ← これ新しい -->
-        <a href="#flow">ご利用の流れ</a>
+        <a href="#support">ご相談の方へ</a>
+        <a href="#recruit">採用情報</a>
         <a href="#access">アクセス</a>
-        <a class="btn" href="#contact" aria-label="お問い合わせへ移動">お問い合わせ</a>
+        <a class="header-cta" href="#contact">相談・応募はこちら <span aria-hidden="true">→</span></a>
       </nav>
+
+      <div class="header-contact">
+        <span class="phone-icon" aria-hidden="true">☎</span>
+        <a href="tel:0666811211"><span>平日 10:00〜17:00</span><strong>06-6681-1211</strong></a>
+      </div>
+
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="メニューを開く">
+        <span></span>
+      </button>
     </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-inner">
-
-        <!-- 上段：利用者向けメッセージ -->
-        <p class="hero-eyecatch">大阪市住之江区の障がい福祉サービス</p>
-        <h1 class="hero-title">一人ひとりの「その人らしい暮らし」を、いっしょに。</h1>
-        <p class="hero-desc">
-          重度訪問介護・居宅介護・行動援護・移動支援を中心に、<br>
-          地域での暮らしが途切れない支援を行っています。
-        </p>
-
-        <a href="#contact" class="button hero-btn">サービスのご相談はこちら</a>
-      </div>
-
-      <!-- 下段：採用への誘導帯 -->
-      <div class="hero-recruit-band">
-        <div class="band-text">
-          🌱 一緒に働く仲間を募集しています（未経験・ブランクあり歓迎）
+  <main id="main-content">
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>大阪市住之江区で、2002年から</p>
+          <h1>暮らしのそばに、<em>わかくさ。</em></h1>
+          <p class="hero-lead">その人らしい毎日を、住み慣れた地域で。ご本人・ご家族の思いを丁寧に伺い、生活のすぐそばで支えます。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">サービスを相談する <span aria-hidden="true">→</span></a>
+            <a class="btn btn-secondary" href="#recruit">一緒に働く人を見る <span aria-hidden="true">→</span></a>
+          </div>
+          <p class="hero-caption">利用相談・見学・求人応募、まずはお話だけでもどうぞ。</p>
         </div>
-        <a href="#recruit" class="band-button">採用情報を見る</a>
-      </div>
-    </section>
 
-
-    <!-- Services with imagery -->
-    <section id="services">
-      <div class="container">
-        <h2 class="section-title">主なサービス</h2>
-        <div class="grid grid-2">
-          <article class="card">
-            <div class="media">
-              <img alt="重度訪問介護" src="service-judo.jpg">
-              <span class="badge">重度訪問介護</span>
-            </div>
-            <h3>重度訪問介護</h3>
-            <p>重度の肢体不自由、知的・精神の障がいにより常時介護を必要とする方のご自宅を訪問。入浴・排せつ・食事等の介護、家事、外出時の移動支援まで総合的に行います。</p>
-          </article>
-
-          <article class="card">
-            <div class="media">
-              <img alt="居宅介護" src="service-kyotaku.jpg">
-              <span class="badge">居宅介護</span>
-            </div>
-            <h3>居宅介護</h3>
-            <p>ご自宅での生活を支援。入浴・排せつ・食事等の身体介護、調理・洗濯・掃除などの家事援助、生活全般に関する相談・助言を行います。</p>
-          </article>
-
-          <article class="card">
-            <div class="media">
-              <img alt="行動援護" src="service-kodo.jpg">
-              <span class="badge">行動援護</span>
-            </div>
-            <h3>行動援護</h3>
-            <p>知的・精神の障がいにより行動上の著しい困難がある方に、危険回避や移動中の介護、排せつ・食事等の介護など、外出場面も含め必要な援護を提供します。</p>
-          </article>
-
-          <article class="card">
-            <div class="media">
-              <img alt="移動支援" src="service-ido.jpg">
-              <span class="badge">移動支援</span>
-            </div>
-            <h3>移動支援</h3>
-            <p>余暇活動や通院・各種手続きなど、社会参加や日常生活上必要な外出の際に、安全な移動をサポートします。</p>
-          </article>
+        <div class="hero-visual">
+          <span class="hero-sticker" aria-hidden="true">地域とともに<br>一歩ずつ</span>
+          <div class="hero-photo-wrap">
+            <img class="hero-photo" src="hero.jpg" alt="サポートセンターわかくさの入口" width="1248" height="832">
+          </div>
+          <div class="hero-card">
+            <span class="hero-card-label">WELCOME</span>
+            <strong>「ちょっと聞いてみたい」<br>から始められます</strong>
+            <small>相談支援専門員の方もお気軽に</small>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Flow -->
-    <!-- 採用情報セクション -->
-    <section id="recruit" class="recruit-section">
+    <section class="quick-actions" aria-label="目的別メニュー">
+      <div class="container quick-grid">
+        <a class="quick-item" href="#support">
+          <span class="quick-icon" aria-hidden="true">01</span>
+          <span><strong>利用相談をしたい方</strong><small>サービス内容・ご利用の流れ</small></span>
+          <span class="link-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="quick-item" href="#recruit">
+          <span class="quick-icon" aria-hidden="true">02</span>
+          <span><strong>一緒に働きたい方</strong><small>正社員・パート・ボランティア</small></span>
+          <span class="link-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="quick-item" href="#contact">
+          <span class="quick-icon" aria-hidden="true">03</span>
+          <span><strong>まずは話を聞きたい方</strong><small>電話・メールフォームで受付</small></span>
+          <span class="link-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="services">
       <div class="container">
-        <h2 class="section-title">採用情報</h2>
-        <p class="recruit-lead">
-          サポートセンターわかくさでは、障がいのある方の暮らしを一緒に支えてくださる仲間を募集しています。
-          経験の有無にかかわらず、「人の役に立ちたい」「地域で誰かの力になりたい」という想いを大切にしています。
-        </p>
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">For daily life</p>
+            <h2 class="section-title">毎日の「できた」を<br>支えるサービス</h2>
+            <p class="section-lead">ご本人の希望や生活のリズムに合わせて、必要な支援を一緒に考えます。</p>
+          </div>
+          <a class="btn-text" href="#contact">サービスについて相談する <span class="link-arrow" aria-hidden="true">→</span></a>
+        </div>
 
-        <div class="recruit-grid">
-          <!-- 正社員 -->
-          <article class="recruit-card">
-            <!-- ★ 正社員用イメージ -->
-            <figure class="recruit-visual">
-              <img src="recruit-full.jpg" alt="車いすの利用者さまと介護スタッフが向かい合って話している様子">
-            </figure>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-image">
+              <img src="service-judo.jpg" alt="重度訪問介護のイメージ" width="1024" height="1024" loading="lazy">
+              <span class="service-number" aria-hidden="true">01</span>
+            </div>
+            <div class="service-body">
+              <h3>重度訪問介護</h3>
+              <p>常時介護を必要とする方のご自宅へ訪問。身体介護・家事・外出時の支援まで、暮らし全体をサポートします。</p>
+            </div>
+          </article>
+          <article class="service-card">
+            <div class="service-image">
+              <img src="service-kyotaku.jpg" alt="居宅介護のイメージ" width="1024" height="1024" loading="lazy">
+              <span class="service-number" aria-hidden="true">02</span>
+            </div>
+            <div class="service-body">
+              <h3>居宅介護</h3>
+              <p>入浴・排せつ・食事などの身体介護から、調理・洗濯・掃除などの家事援助まで、ご自宅での生活を支えます。</p>
+            </div>
+          </article>
+          <article class="service-card">
+            <div class="service-image">
+              <img src="service-kodo.jpg" alt="行動援護のイメージ" width="1024" height="1024" loading="lazy">
+              <span class="service-number" aria-hidden="true">03</span>
+            </div>
+            <div class="service-body">
+              <h3>行動援護</h3>
+              <p>行動上の著しい困難がある方に、危険回避や移動中の介護など、外出場面も含めた援護を提供します。</p>
+            </div>
+          </article>
+          <article class="service-card">
+            <div class="service-image">
+              <img src="service-ido.jpg" alt="移動支援のイメージ" width="1024" height="1024" loading="lazy">
+              <span class="service-number" aria-hidden="true">04</span>
+            </div>
+            <div class="service-body">
+              <h3>移動支援</h3>
+              <p>余暇活動・通院・各種手続きなど、社会参加や日常生活に必要な外出を安全にサポートします。</p>
+            </div>
+          </article>
+        </div>
 
+        <div class="service-note">
+          <span class="service-note-mark" aria-hidden="true">＋</span>
+          <span><strong>日中一時支援にも対応しています</strong><span>ご利用条件や空き状況など、まずはお問い合わせください。</span></span>
+          <a class="btn-text" href="#contact">相談する <span class="link-arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="support">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Start with a conversation</p>
+            <h2 class="section-title">こんなご相談から<br>お受けしています</h2>
+          </div>
+        </div>
+
+        <div class="support-grid">
+          <article class="support-card">
+            <span class="support-label">利用者さま・ご家族へ</span>
+            <h3>「どんな支援が合うか<br>一緒に考えてほしい」</h3>
+            <p>ご本人の希望、ご家族の状況、今困っていることを伺いながら、利用できるサービスや支援の形を一緒に整理します。</p>
+            <a class="btn-text" href="#contact">利用相談をする <span class="link-arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="support-card recruit-card-accent">
+            <span class="support-label">相談支援専門員・関係機関の方へ</span>
+            <h3>「まずは事業所のことを<br>知りたい」</h3>
+            <p>サービス内容、対応エリア、ご利用までの流れなど、連携に必要な情報をご案内します。見学もご相談ください。</p>
+            <a class="btn-text" href="#contact">連携について問い合わせる <span class="link-arrow" aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section flow-section" id="flow">
+      <div class="container">
+        <div class="flow-panel">
+          <div class="section-head">
             <div>
-              <span class="recruit-tag">正社員</span>
-              <h3>訪問介護スタッフ（重度訪問介護・居宅介護 等）</h3>
-              <p class="recruit-meta">
-                重度訪問介護・居宅介護・行動援護・移動支援など、利用者さまの暮らしに寄り添う訪問支援のお仕事です。
-              </p>
+              <p class="section-kicker">How it works</p>
+              <h2 class="section-title">ご利用までの流れ</h2>
+              <p class="section-lead">まずはお電話またはフォームから。ご本人・ご家族・相談支援専門員の方からご連絡いただけます。</p>
             </div>
-
-            <div class="table-scroll">
-              <table class="recruit-table">
-                <tr>
-                  <th>勤務地</th>
-                  <td>サポートセンターわかくさ（大阪市住之江区御崎5-14-11 クレセントマンションB108）を拠点に、大阪市内の利用者さま宅への訪問</td>
-                </tr>
-                <tr>
-                  <th>仕事内容</th>
-                  <td>
-                    入浴・排せつ・食事などの身体介護、調理・洗濯・掃除などの家事援助、外出・通院の付き添い など<br>
-                    ※担当するサービスは、ご本人の希望や経験に応じて相談のうえ決定します。
-                  </td>
-                </tr>
-                <tr>
-                  <th>応募資格</th>
-                  <td>
-                    介護職員初任者研修（旧ヘルパー2級）以上をお持ちの方歓迎<br>
-                    障がい福祉分野での実務経験がある方優遍<br>
-                    ※未経験の方・ブランクのある方もお気軽にご相談ください。
-                  </td>
-                </tr>
-                <tr>
-                  <th>勤務時間</th>
-                  <td>シフト制（例：9:00〜18:00 など）。夜間帯を含む重度訪問介護の勤務も応相談。</td>
-                </tr>
-                <tr>
-                  <th>休日・休暇</th>
-                  <td>シフトによる週休2日制／有給休暇／その他 休暇制度あり</td>
-                </tr>
-                <tr>
-                  <th>給与</th>
-                  <td>
-                    月給：当社規定による（経験・資格等を考慮のうえ決定）<br>
-                    資格手当・処遇改善手当 など別途支給あり<br>
-                    ※詳細は面談時にご説明いたします。お気軽にお問い合わせください。
-                  </td>
-                </tr>
-                <tr>
-                  <th>待遇・福利厚生</th>
-                  <td>
-                    各種社会保険完備／交通費支給（規定あり）／昇給・賞与あり（業績による）／
-                    研修・資格取得支援制度　など
-                  </td>
-                </tr>
-              </table>
-            </div>
-
-            <div class="recruit-cta">
-              ご興味のある方は、お気軽にお電話またはお問い合わせフォームからご連絡ください。<br>
-              <a href="#contact" class="button">正社員求人について問い合わせる</a>
-            </div>
-          </article>
-
-          <!-- パート・アルバイト -->
-          <article class="recruit-card">
-            <!-- ★ パート用イメージ -->
-            <figure class="recruit-visual">
-              <img src="recruit-part.jpg" alt="利用者さまとお茶を飲みながら談笑する介護スタッフ">
-            </figure>
-
-            <div>
-              <span class="recruit-tag">パート・アルバイト</span>
-              <h3>訪問介護スタッフ（登録ヘルパー）</h3>
-              <p class="recruit-meta">
-                ライフスタイルに合わせて働ける登録ヘルパーさんを募集しています。週1回・短時間からの勤務もご相談ください。
-              </p>
-            </div>
-
-            <div class="table-scroll">
-              <table class="recruit-table">
-                <tr>
-                  <th>勤務形態</th>
-                  <td>週1日・1コマから勤務時間・曜日の相談OK／ダブルワーク・扶養内勤務も歓迎</td>
-                </tr>
-                <tr>
-                  <th>仕事内容</th>
-                  <td>
-                    身体介護・家事援助・移動支援などの訪問介護業務全般<br>
-                    慣れるまでは経験のあるスタッフが同行し、安心してお仕事に慣れていただけるようサポートします。
-                  </td>
-                </tr>
-                <tr>
-                  <th>応募資格</th>
-                  <td>
-                    介護職員初任者研修（旧ヘルパー2級）以上をお持ちの方歓迎<br>
-                    学生・主婦（夫）・Wワークの方も歓迎します。
-                  </td>
-                </tr>
-                <tr>
-                  <th>給与</th>
-                  <td>
-                    時給：当社規定による（サービス種別・時間帯により変動）<br>
-                    早朝・夜間・深夜手当／処遇改善手当 など別途支給あり<br>
-                    ※詳細はお問い合わせください。
-                  </td>
-                </tr>
-                <tr>
-                  <th>待遇</th>
-                  <td>
-                    交通費支給（規定あり）／各種手当あり／研修・ミーティングあり／
-                    資格取得支援制度　など
-                  </td>
-                </tr>
-              </table>
-            </div>
-
-            <div class="recruit-cta">
-              「少しだけ働いてみたい」「まずは話だけ聞いてみたい」という方も歓迎です。<br>
-              <a href="#contact" class="button">パート・登録ヘルパーについて問い合わせる</a>
-            </div>
-          </article>
-        </div>
-
-        <!-- ボランティア募集 -->
-        <div class="volunteer-box">
-          <figure class="volunteer-visual">
-            <img src="volunteer.jpg" alt="利用者さまとボランティアが一緒に活動を楽しんでいる様子">
-          </figure>
-
-          <h3>ボランティアスタッフ募集</h3>
-          <p>
-            利用者さまとのお出かけや行事、サークル活動などをお手伝いいただけるボランティアさんも募集中です。
-            介護の資格や経験は問いません。「人と関わることが好き」「地域に役立つことをしてみたい」という方を歓迎します。
-          </p>
-          <ul>
-            <li>活動内容の例：外出時の付き添い、行事の準備や片付け、レクリエーションのお手伝い など</li>
-            <li>活動日時：平日・土日いずれも相談のうえ決定（単発参加もOK）</li>
-            <li>対象：高校生以上の方（18歳未満の方は保護者の同意をお願いする場合があります）</li>
-          </ul>
-          <p class="recruit-cta">
-            詳細はお問い合わせの際にご説明いたします。ご興味のある方は、お気軽にご連絡ください。<br>
-            <a href="#contact" class="button">ボランティアについて問い合わせる</a>
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ご利用の流れセクション -->
-    <section id="flow">
-      <div class="container">
-        <h2 class="section-title">ご利用の流れ</h2>
-        <div class="steps">
-          <div class="step">
-            <h3>相談・お問い合わせ</h3>
-            <p>ご本人・ご家族・相談支援専門員からお気軽にご連絡ください。</p>
           </div>
-          <div class="step">
-            <h3>面談・アセスメント</h3>
-            <p>ご希望や生活状況を丁寧に伺い、最適な支援を提案します。</p>
-          </div>
-          <div class="step">
-            <h3>契約・支援開始</h3>
-            <p>サービス計画に基づき、安心してご利用いただけます。</p>
+          <div class="flow-steps">
+            <div class="flow-step">
+              <span class="flow-step-number">01</span>
+              <h3>相談・お問い合わせ</h3>
+              <p>気になっていること、希望する生活など、分かる範囲でお聞かせください。</p>
+            </div>
+            <div class="flow-step">
+              <span class="flow-step-number">02</span>
+              <h3>面談・アセスメント</h3>
+              <p>ご希望や生活状況を丁寧に伺い、必要な支援や利用方法をご案内します。</p>
+            </div>
+            <div class="flow-step">
+              <span class="flow-step-number">03</span>
+              <h3>契約・支援開始</h3>
+              <p>サービス計画に基づき、安心してご利用いただけるよう準備します。</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-
-
-    <!-- Recruit -->
-
-
-    <!-- Volunteer -->
-
-
-    <!-- Access & Contact -->
-    <section id="access" class="access-section">
+    <section class="section recruit-section" id="recruit">
       <div class="container">
-        <h2 class="section-title">アクセス</h2>
+        <div class="recruit-top">
+          <div class="recruit-copy">
+            <p class="section-kicker light">Work with us</p>
+            <h2 class="section-title light">人の暮らしに寄り添う仕事を、<br>わかくさで。</h2>
+            <p class="section-lead">経験や資格だけでなく、「誰かの力になりたい」という気持ちを大切にしています。利用者さまの毎日に寄り添う仲間を募集しています。</p>
+            <div class="recruit-benefits">
+              <span class="benefit-pill">未経験・ブランク歓迎</span>
+              <span class="benefit-pill">週1日・短時間から相談</span>
+              <span class="benefit-pill">同行・研修あり</span>
+            </div>
+          </div>
+          <div class="recruit-visual">
+            <img src="recruit-full.jpg" alt="利用者さまと介護スタッフが向かい合って話している様子" width="1536" height="1024" loading="lazy">
+            <div class="recruit-visual-note">まずは見学・仕事内容の相談だけでも歓迎です。</div>
+          </div>
+        </div>
+
+        <div class="job-grid">
+          <article class="job-card">
+            <span class="job-tag">正社員</span>
+            <div class="job-photo"><img src="recruit-full.jpg" alt="正社員スタッフと利用者さまが話している様子" width="1536" height="1024" loading="lazy"></div>
+            <h3>訪問介護スタッフ<br>（重度訪問介護・居宅介護など）</h3>
+            <p>利用者さまのご自宅を訪問し、生活に寄り添う支援を行います。</p>
+            <ul class="job-list">
+              <li>大阪市内の利用者さま宅への訪問</li>
+              <li>シフト制／夜間帯を含む勤務も応相談</li>
+              <li>社会保険・交通費・各種手当あり</li>
+            </ul>
+            <a class="btn btn-light" href="#contact">正社員について聞く <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="job-card">
+            <span class="job-tag">パート・登録ヘルパー</span>
+            <div class="job-photo"><img src="recruit-part.jpg" alt="パートスタッフと利用者さまがお茶を楽しんでいる様子" width="1536" height="1024" loading="lazy"></div>
+            <h3>ライフスタイルに合わせて<br>無理なく働く</h3>
+            <p>週1日・1コマから、勤務時間や曜日を相談できます。</p>
+            <ul class="job-list">
+              <li>ダブルワーク・扶養内勤務も歓迎</li>
+              <li>慣れるまで経験者が同行</li>
+              <li>早朝・夜間など各種手当あり</li>
+            </ul>
+            <a class="btn btn-light" href="#contact">パートについて聞く <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+
+        <div class="volunteer-row">
+          <img src="volunteer.jpg" alt="ボランティアと利用者さまが活動を楽しんでいる様子" width="1024" height="1024" loading="lazy">
+          <span><strong>ボランティアスタッフも募集中</strong><p>資格や経験は問いません。外出・行事・活動のお手伝いから始められます。</p></span>
+          <a class="btn-text" href="#contact">詳しく聞く <span class="link-arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <p class="section-kicker">About wakakusa</p>
+          <h2 class="section-title">地域の中で、<br>長く、ていねいに。</h2>
+          <p>サポートセンターわかくさは、株式会社わかくさが運営する障がい福祉サービスの事業所です。2002年の開設以来、大阪市住之江区を拠点に、地域で暮らす方の毎日に寄り添ってきました。</p>
+          <p>支援する側・される側という関係だけではなく、一人ひとりの思いを知り、同じ地域で暮らす仲間として向き合うことを大切にしています。</p>
+          <span class="about-signature">サポートセンターわかくさ</span>
+          <div class="about-stats">
+            <div class="stat"><strong>2002<small>年</small></strong><span>開設</span></div>
+            <div class="stat"><strong>大阪市</strong><span>住之江区を拠点</span></div>
+            <div class="stat"><strong>5<small>つ</small></strong><span>障がい福祉サービス</span></div>
+          </div>
+        </div>
+        <div class="about-photo">
+          <img src="hero.jpg" alt="サポートセンターわかくさの外観" width="1248" height="832" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="access">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Find us</p>
+            <h2 class="section-title">アクセス・事業所情報</h2>
+            <p class="section-lead">ご来所の際は、事前にお電話またはフォームからご連絡ください。</p>
+          </div>
+        </div>
 
         <div class="access-grid">
-
-          <!-- 会社情報カード -->
-          <div class="access-card info-card">
-            <ul>
-              <li>
-                <span class="icon">📍</span>
-                <strong>所在地：</strong>大阪市住之江区御崎5-14-11 クレセントマンションB108
-              </li>
-              <li>
-                <span class="icon">📞</span>
-                <strong>電話：</strong><a href="tel:0666811211">06-6681-1211</a>
-              </li>
-              <li>
-                <span class="icon">📠</span>
-                <strong>FAX：</strong>06-6681-1246
-              </li>
-              <li>
-                <span class="icon">✉️</span>
-                <strong>メール：</strong>
-                <a href="mailto:wakakusa2002@gmail.com">wakakusa2002@gmail.com</a>
-              </li>
-              <li>
-                <span class="icon">⏰</span>
-                <strong>受付時間：</strong>平日 10:00〜17:00
-              </li>
-            </ul>
+          <div class="access-card">
+            <h3>サポートセンターわかくさ</h3>
+            <dl class="info-list">
+              <div class="info-item"><dt aria-hidden="true">場所</dt><dd>〒559-0013<br>大阪市住之江区御崎5-14-11<br>クレセントマンションB108</dd></div>
+              <div class="info-item"><dt aria-hidden="true">電話</dt><dd><a href="tel:0666811211">06-6681-1211</a></dd></div>
+              <div class="info-item"><dt aria-hidden="true">FAX</dt><dd>06-6681-1246</dd></div>
+              <div class="info-item"><dt aria-hidden="true">メール</dt><dd><a href="mailto:wakakusa2002@gmail.com">wakakusa2002@gmail.com</a></dd></div>
+              <div class="info-item"><dt aria-hidden="true">受付</dt><dd>平日 10:00〜17:00</dd></div>
+            </dl>
+            <p class="access-note">南海電鉄・大阪メトロ沿線からのアクセスなど、詳しくはお問い合わせください。</p>
           </div>
-
-          <!-- Googleマップカード -->
           <div class="access-card map-card">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.8928472533403!2d135.4775376757404!3d34.606870972953146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000dd0373eebcb9%3A0xb0f45ebbef20fdb7!2z44CSNTU5LTAwMTMg5aSn6Ziq5bqc5aSn6Ziq5biC5L2P5LmL5rGf5Yy65b6h5bSO77yV5LiB55uu77yR77yU4oiS77yR77yRIOOCr-ODrOOCu-ODs-ODiOODnuODs-OCt-ODp-ODsyBiMTA4!5e0!3m2!1sja!2sjp!4v1763534377496!5m2!1sja!2sjp"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- About / Company -->
-    <section id="about">
-      <div class="container">
-        <h2 class="section-title">法人概要</h2>
-        <div class="grid grid-2">
-          <div class="card">
-            <p><strong>法人名：</strong>株式会社わかくさ</p>
-            <p><strong>事業所名：</strong>サポートセンターわかくさ</p>
-            <p><strong>事業内容：</strong>障がい福祉サービス（重度訪問介護・居宅介護・行動援護・移動支援・日中一時支援）</p>
-            <p><strong>開設：</strong>2002年</p>
-          </div>
-          <div class="card">
-            <p class="muted">採用・ボランティア・見学のご相談はお気軽にご連絡ください。</p>
-            <div class="cta-wrap">
-              <a class="btn-lg" href="#contact">お問い合わせ</a>
-              <a class="btn-lg btn-ghost" href="mailto:wakakusa2002@gmail.com">メールを送る</a>
-            </div>
+            <iframe title="サポートセンターわかくさの地図" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.8928472533403!2d135.4775376757404!3d34.606870972953146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000dd0373eebcb9%3A0xb0f45ebbef20fdb7!2z44CSNTU5LTAwMTMg5aSn6Ziq5bqc5aSn6Ziq5biC5L2P5LmL5rGf5Yy65b6h5bSO77yV5LiB55uu77yR77yU4oiS77yR77yRIOOCr-ODrOOCu-ODs-ODiOODnuODs-OCt-ODp-ODsyBiMTA4!5e0!3m2!1sja!2sjp!4v1763534377496!5m2!1sja!2sjp" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-title">お問い合わせ</h2>
-        <div class="grid grid-2">
-          <div class="card">
-            <h3>お電話でのお問い合わせ</h3>
-            <p>
-              <a class="nowrap" href="tel:0666811211">06-6681-1211</a><br>
-              <small class="muted">（受付：平日 10:00〜17:00）</small>
-            </p>
-            <h3>FAXでのお問い合わせ</h3>
-            <p>06-6681-1246</p>
-            <h3>メールでのお問い合わせ</h3>
-            <p>
-              <a href="mailto:wakakusa2002@gmail.com">wakakusa2002@gmail.com</a><br>
-              <small class="muted">※ご返信にお時間をいただく場合があります。</small>
-            </p>
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-intro">
+          <div>
+            <p class="section-kicker light">Contact</p>
+            <h2 class="section-title light">まずは、どんなことでも<br>ご相談ください。</h2>
+            <p>利用相談、求人応募、見学、関係機関からのご連絡など、内容に合わせてご案内します。</p>
           </div>
-          <div class="card">
-            <h3>メールフォームでのお問い合わせ</h3>
-            <form class="contact-form" action="https://formspree.io/f/mjgwqgyn" method="POST">
-              <div class="form-group">
+          <a class="contact-phone" href="tel:0666811211"><span>お電話でのご相談</span><strong>06-6681-1211</strong><small>平日 10:00〜17:00</small></a>
+        </div>
+
+        <div class="contact-form-card">
+          <h3>メールフォームで問い合わせる</h3>
+          <p>分かる範囲でご記入ください。確認後、担当者よりご連絡します。</p>
+          <form class="contact-form" action="https://formspree.io/f/mjgwqgyn" method="POST">
+            <input type="hidden" name="_subject" value="わかくさホームページからのお問い合わせ">
+            <div class="form-row">
+              <div class="form-field">
                 <label for="name">お名前</label>
-                <input type="text" id="name" name="name" placeholder="例：山田 太郎" required>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="例：山田 太郎" required>
               </div>
-              <div class="form-group">
+              <div class="form-field">
                 <label for="email">メールアドレス</label>
-                <input type="email" id="email" name="email" placeholder="例：example@mail.com" required>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="例：example@mail.com" required>
               </div>
-              <div class="form-group">
-                <label for="subject">件名<span class="optional">（任意）</span></label>
-                <input type="text" id="subject" name="subject" placeholder="例：サービスについて">
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="phone">電話番号<span class="optional">（任意）</span></label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="例：06-0000-0000">
               </div>
-              <div class="form-group">
-                <label for="message">お問い合わせ内容</label>
-                <textarea id="message" name="message" placeholder="ご質問やご相談内容をご記入ください" required></textarea>
+              <div class="form-field">
+                <label for="category">お問い合わせ種別</label>
+                <select id="category" name="category">
+                  <option value="利用相談">利用相談</option>
+                  <option value="求人応募・採用について">求人応募・採用について</option>
+                  <option value="見学について">見学について</option>
+                  <option value="関係機関からのご連絡">関係機関からのご連絡</option>
+                  <option value="その他">その他</option>
+                </select>
               </div>
-              <button type="submit" class="form-submit">送信する</button>
-            </form>
-          </div>
+            </div>
+            <div class="form-field">
+              <label for="message">お問い合わせ内容</label>
+              <textarea id="message" name="message" placeholder="ご質問・ご相談内容をご記入ください" required></textarea>
+            </div>
+            <button class="form-submit" type="submit">内容を確認して送信する <span aria-hidden="true">→</span></button>
+            <p class="form-footnote">※送信後の確認画面はフォームサービスの画面に移動します。</p>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-grid">
-      <div>
-        <strong>サポートセンターわかくさ</strong><br>
-        <span class="muted">© <span id="y"></span> wakakusa-care.com</span>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">W</span>
+          <div><strong>サポートセンターわかくさ</strong><p>株式会社わかくさ<br>大阪市住之江区御崎5-14-11 クレセントマンションB108</p></div>
+        </div>
+        <ul class="footer-links" aria-label="フッターメニュー">
+          <li><a href="#services">サービス</a></li>
+          <li><a href="#support">ご相談の方へ</a></li>
+          <li><a href="#recruit">採用情報</a></li>
+          <li><a href="#flow">ご利用の流れ</a></li>
+          <li><a href="#access">アクセス</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+        <a class="btn btn-light footer-cta" href="#contact">相談・応募はこちら <span aria-hidden="true">→</span></a>
       </div>
-      <div style="text-align:right">
-        <a href="#top" aria-label="ページ先頭へ">ページ先頭へ↑</a>
-      </div>
+      <div class="footer-bottom"><span>© <span id="current-year"></span> サポートセンターわかくさ</span><span>障がい福祉サービス / 大阪市住之江区</span></div>
     </div>
   </footer>
 
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="ページ上部へ戻る" aria-hidden="true">↑</button>
+
+  <div class="mobile-action-bar" aria-label="スマートフォン用メニュー">
+    <a href="tel:0666811211"><span aria-hidden="true">☎</span>電話で相談</a>
+    <a href="#contact"><span aria-hidden="true">✉</span>フォームで相談</a>
+  </div>
+
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    (function () {
+      var year = document.getElementById('current-year');
+      if (year) year.textContent = new Date().getFullYear();
+
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (toggle && nav) {
+        var closeMenu = function () {
+          nav.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.setAttribute('aria-label', 'メニューを開く');
+        };
+        toggle.addEventListener('click', function () {
+          var isOpen = nav.classList.toggle('is-open');
+          toggle.setAttribute('aria-expanded', String(isOpen));
+          toggle.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
+        });
+        nav.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', closeMenu);
+        });
+      }
+
+      var topButton = document.getElementById('back-to-top');
+      if (topButton) {
+        var getScrollY = function () {
+          return Math.max(
+            window.scrollY || 0,
+            document.documentElement.scrollTop || 0,
+            document.body ? document.body.scrollTop : 0
+          );
+        };
+        var updateTopButton = function () {
+          var visible = getScrollY() > 420;
+          topButton.classList.toggle('is-visible', visible);
+          topButton.setAttribute('aria-hidden', String(!visible));
+        };
+        var goTop = function () {
+          var behavior = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+          var scrollingElement = document.scrollingElement || document.documentElement;
+          var target = document.body && document.body.scrollTop > 0 ? document.body : scrollingElement;
+          if (target && typeof target.scrollTo === 'function') {
+            target.scrollTo({ top: 0, behavior: behavior });
+          } else {
+            window.scrollTo({ top: 0, behavior: behavior });
+          }
+        };
+        [window, document.documentElement, document.body].forEach(function (target) {
+          if (target) target.addEventListener('scroll', updateTopButton, { passive: true });
+        });
+        topButton.addEventListener('click', goTop);
+        updateTopButton();
+      }
+    })();
   </script>
 
-  <!-- Schema.org (Organization) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -1457,30 +2575,18 @@
     "telephone": "+81-6-6681-1211",
     "address": {
       "@type": "PostalAddress",
+      "postalCode": "559-0013",
       "addressLocality": "大阪市住之江区",
       "streetAddress": "御崎5-14-11 クレセントマンションB108",
       "addressCountry": "JP"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+81-6-6681-1211",
+      "contactType": "customer service",
+      "availableLanguage": "Japanese"
     }
   }
-  </script>
-
-  <!-- 右下固定の「↑戻る」ボタン -->
-  <button id="backToTop" class="back-to-top" aria-label="ページ上部へ戻る">↑</button>
-  <script>
-    (function () {
-      var btn = document.getElementById('backToTop');
-      if (!btn) return;
-      var toggle = function () {
-        btn.style.display = (window.scrollY > 300) ? 'block' : 'none';
-      };
-      var goTop = function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      };
-      window.addEventListener('scroll', toggle, { passive: true });
-      btn.addEventListener('click', goTop);
-      btn.addEventListener('touchstart', goTop, { passive: true });
-      toggle();
-    })();
   </script>
 </body>
 
