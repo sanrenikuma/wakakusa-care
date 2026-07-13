@@ -9,7 +9,7 @@
 ## 現在の状態
 
 - ブランチ: `main`
-- HEAD / upstream: `26d447d` / `26d447d`（一致確認済み）
+- HEAD / upstream: 作業開始時に `git rev-parse HEAD` / `git rev-parse origin/main` で一致を確認する。今回も一致確認済み。
 - 作業ツリー: `.DS_Store` のみ未コミット。サイトと引き継ぎ文書に未コミット差分はない。
 - 現在の変更範囲: `index.html` の全面刷新と、標準の引き継ぎ方式（`AGENTS.md` / `HANDOFF.md`）がリポジトリに反映済み。
 - 公開先: Vercel。公開URLは `https://wakakusa-care.com/`、代替URLは `https://wakakusa-care.vercel.app/`。
