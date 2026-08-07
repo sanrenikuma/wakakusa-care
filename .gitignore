@@ -1,0 +1,9 @@
+.DS_Store
+
+# 秘密情報
+.env
+.env.*
+!.env.example
+credentials*
+secrets*
+tokens*
