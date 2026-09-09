@@ -4,36 +4,33 @@
 
 - 更新日時: 2026-09-10 Asia/Tokyo
 - 更新者: Cursor
-- 現在の目的: レビューで出た導線・見た目・読みやすさの指摘を、確認済みの事実だけを保ったまま直す。
+- 現在の目的: レビュー指摘を直したホームページを、確認済みの事実だけを保ったまま運用する。
 
 ## 現在の状態
 
 - ブランチ: `main`
-- GitHub: `https://github.com/sanrenikuma/wakakusa-care`（公開リポジトリ）
-- 作業ツリー: 相談と採用の導線・読みやすさ・画像圧縮の修正をこのコミットに含める。`.DS_Store` は対象外。
-- 公開先: Vercel。本番は `https://wakakusa-care.com/`、代替は `https://wakakusa-care.vercel.app/`。`main` への push が反映契機。
-- 構成: 画像と `index.html`。完了ページ `thanks.html` を追加。フォーム送信先は従来の Formspree のまま。
+- HEAD / upstream: `1caecd9`。ローカルと `origin/main` は一致。
+- 作業ツリー: サイト差分なし。`.DS_Store` は対象外。
+- GitHub: `https://github.com/sanrenikuma/wakakusa-care`
+- 公開先: Vercel。`https://wakakusa-care.com/` と `https://wakakusa-care.vercel.app/`
+- 構成: `index.html`、画像（JPEG / WebP）、`thanks.html`、`favicon.svg`。フォーム送信先は従来の Formspree のまま。
 
 ## 直近で完了したこと
 
-- GitHubリポジトリは既にあったため、新規作成はしていない。
-- スマホ固定バーの逃げ余白、採用からの種別着地、同意チェック、コントラスト、メニューのEscape閉じを入れた。
-- 未確認の求人条件は断定をやめ、「お問い合わせください」に弱めた。
-- 英語キッカーを日本語にし、入口写真の変形を角丸に戻し、ヘッダーの名前切れを解消した。
-- JPEGを再圧縮し WebP を追加した。画像合計は約 2.6MB（修正前は約 16.7MB）。
+- `1caecd9 fix: 相談と採用の導線と読みやすさを直す` を `main` に commit し、`origin/main` へ push した。
+- スマホ固定バー、採用からの種別着地、同意チェック、コントラスト、未確認の求人断定、画像圧縮を反映した。
 
 ## 検証済み
 
 - `git diff --check` — 成功。2026-09-10。
 - 内部アンカー、ローカル画像、画像alt、JSON-LD、電話・メール・住所・Formspree送信先 — 成功。2026-09-10。
-- ローカル `python3 -m http.server 8000` と Chrome による 390 / 768 / 1280 幅の画面確認 — 実施。ヘッダー名の全文、種別の初期選択、Escapeでメニュー閉じ、入力欄 16px を確認。
-- 未実施: 実機iPhone、キーボードだけの操作、文字200%、フォーム実送信、本番反映後の目視。
+- 本番HTMLに「利用相談をする」「採用情報を見る」「送信する」があること、`thanks.html` / `favicon.svg` / `hero.webp` の HTTP 200 — 成功。2026-09-10。両方の公開URLで確認。
+- 未実施: 実機iPhone、キーボードだけの操作、文字200%、フォーム実送信、本番のスマホ・PC目視。
 
 ## 次に行うこと
 
-1. push 後に `https://wakakusa-care.com/` と `https://wakakusa-care.vercel.app/` のレスポンスと新しい内容を確認する。
-2. スマホ幅・PC幅でヘッダー、固定バー、採用カード、フォームを目視する。
-3. 事業所側に求人条件・対応エリア・フォーム受信と同意文面の最終確認を依頼する。
+1. 本番をスマホ幅・PC幅で目視し、ヘッダー、固定バー、採用カード、フォームを確認する。
+2. 事業所側に求人条件・対応エリア・フォーム受信と同意文面の最終確認を依頼する。
 
 ## 判断待ち・禁止事項
 
