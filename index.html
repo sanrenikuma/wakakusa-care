@@ -7,20 +7,25 @@
   <title>サポートセンターわかくさ | 大阪市住之江区の障がい福祉サービス</title>
   <meta name="description" content="大阪市住之江区のサポートセンターわかくさ。重度訪問介護・居宅介護・行動援護・移動支援・日中一時支援のご相談、求人・見学のお問い合わせを承っています。">
   <meta name="theme-color" content="#28543b">
+  <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://wakakusa-care.com/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
-  <meta property="og:title" content="暮らしのそばに、わかくさ。">
+  <meta property="og:title" content="サポートセンターわかくさ | 大阪市住之江区の障がい福祉サービス">
+  <meta property="og:site_name" content="サポートセンターわかくさ">
   <meta property="og:description" content="大阪市住之江区で、障がいのある方のその人らしい暮らしを支えています。利用相談・求人・見学のお問い合わせはこちら。">
   <meta property="og:url" content="https://wakakusa-care.com/">
   <meta property="og:image" content="https://wakakusa-care.com/hero.jpg">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="1066">
+  <meta property="og:image:alt" content="サポートセンターわかくさの事業所入口">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&family=Noto+Serif+JP:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=Noto+Serif+JP:wght@700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -225,6 +230,20 @@
       color: var(--muted);
       font-size: .7rem;
       letter-spacing: .08em;
+    }
+
+    /* 横並びのPC幅ではヘッダーが2段になるため、幅に応じて項目を絞る。
+       縦並びになるモバイルメニュー（820px以下）では全項目を出す。 */
+    @media (min-width: 821px) {
+      .primary-nav .nav-extra {
+        display: none;
+      }
+    }
+
+    @media (min-width: 821px) and (max-width: 1100px) {
+      .primary-nav .nav-wide {
+        display: none;
+      }
     }
 
     .header-tools {
@@ -489,11 +508,6 @@
       text-wrap: balance;
     }
 
-    .hero h1 em {
-      color: var(--leaf);
-      font-style: normal;
-    }
-
     .hero-lead {
       max-width: 610px;
       margin: 26px 0 32px;
@@ -697,10 +711,6 @@
       background: var(--paper-warm);
     }
 
-    .section-mint {
-      background: var(--mint);
-    }
-
     .section-head {
       display: flex;
       align-items: end;
@@ -761,7 +771,6 @@
 
     .service-card:hover {
       box-shadow: var(--shadow-sm);
-      transform: translateY(-5px);
     }
 
     .service-image {
@@ -1268,32 +1277,6 @@
       color: var(--muted);
       font-size: .75rem;
       line-height: 1.4;
-    }
-
-    .about-photo {
-      position: relative;
-      overflow: hidden;
-      padding: 13px;
-      border-radius: 28px;
-      background: var(--mint);
-      transform: rotate(2deg);
-    }
-
-    .about-photo::before {
-      position: absolute;
-      top: 0;
-      left: 20%;
-      width: 60%;
-      height: 1px;
-      background: var(--coral);
-      content: "";
-    }
-
-    .about-photo img {
-      width: 100%;
-      aspect-ratio: 1.15;
-      object-fit: cover;
-      border-radius: 20px;
     }
 
     .access-grid {
@@ -2220,7 +2203,7 @@
       .btn-secondary:hover,
       .btn-light:hover,
       .service-card:hover,
-      .form-submit:hover {
+      .form-submit:hover:not(:disabled) {
         transform: translateY(-2px);
       }
 
@@ -2302,11 +2285,11 @@
       <nav class="primary-nav" id="primary-nav" aria-label="メインメニュー">
         <a href="#services">サービス</a>
         <a href="#support">ご相談の方へ</a>
-        <a href="#flow">ご利用の流れ</a>
+        <a class="nav-wide" href="#flow">ご利用の流れ</a>
         <a href="#recruit">採用情報</a>
-        <a href="#about">私たちについて</a>
+        <a class="nav-extra" href="#about">私たちについて</a>
         <a href="#access">アクセス</a>
-        <a href="#contact">お問い合わせ</a>
+        <a class="nav-extra" href="#contact">お問い合わせ</a>
       </nav>
 
       <div class="header-tools">
@@ -2341,7 +2324,7 @@
           <div class="hero-photo-wrap">
             <picture>
               <source type="image/webp" srcset="hero.webp">
-              <img class="hero-photo" src="hero.jpg" alt="サポートセンターわかくさの入口" width="1600" height="1067" fetchpriority="high">
+              <img class="hero-photo" src="hero.jpg" alt="サポートセンターわかくさの入口" width="1600" height="1066" fetchpriority="high" decoding="async">
             </picture>
           </div>
           <div class="hero-card">
@@ -2389,7 +2372,7 @@
             <div class="service-image">
               <picture>
                 <source type="image/webp" srcset="service-judo.webp">
-                <img src="service-judo.jpg" alt="自宅の居間で、電動車いすの利用者とヘルパーが向かい合って話している様子" width="1254" height="1254" loading="lazy">
+                <img src="service-judo.jpg" alt="自宅の居間で、電動車いすの利用者とヘルパーが向かい合って話している様子" width="1254" height="1254" loading="lazy" decoding="async">
               </picture>
               <span class="service-number" aria-hidden="true">01</span>
             </div>
@@ -2402,7 +2385,7 @@
             <div class="service-image">
               <picture>
                 <source type="image/webp" srcset="service-kyotaku.webp">
-                <img src="service-kyotaku.jpg" alt="玄関で、ヘルパーが靴と上着を渡し、利用者が靴を履いている様子" width="1254" height="1254" loading="lazy">
+                <img src="service-kyotaku.jpg" alt="玄関で、ヘルパーが靴と上着を渡し、利用者が靴を履いている様子" width="1254" height="1254" loading="lazy" decoding="async">
               </picture>
               <span class="service-number" aria-hidden="true">02</span>
             </div>
@@ -2415,7 +2398,7 @@
             <div class="service-image">
               <picture>
                 <source type="image/webp" srcset="service-kodo.webp">
-                <img src="service-kodo.jpg" alt="住宅街の歩道を、中学生くらいの利用者と若いヘルパーが並んで歩いている様子" width="1254" height="1254" loading="lazy">
+                <img src="service-kodo.jpg" alt="住宅街の歩道を、中学生くらいの利用者と若いヘルパーが並んで歩いている様子" width="1254" height="1254" loading="lazy" decoding="async">
               </picture>
               <span class="service-number" aria-hidden="true">03</span>
             </div>
@@ -2428,7 +2411,7 @@
             <div class="service-image">
               <picture>
                 <source type="image/webp" srcset="service-ido.webp">
-                <img src="service-ido.jpg" alt="商店街を、ヘルパーと利用者が並んで歩いている後ろ姿" width="1254" height="1254" loading="lazy">
+                <img src="service-ido.jpg" alt="商店街を、ヘルパーと利用者が並んで歩いている後ろ姿" width="1254" height="1254" loading="lazy" decoding="async">
               </picture>
               <span class="service-number" aria-hidden="true">04</span>
             </div>
@@ -2524,7 +2507,7 @@
           <div class="recruit-visual">
             <picture>
               <source type="image/webp" srcset="recruit-full.webp">
-              <img src="recruit-full.jpg" alt="日当たりのよい部屋のテーブルを挟んで、スタッフと利用者が話している様子" width="1536" height="1024" loading="lazy">
+              <img src="recruit-full.jpg" alt="日当たりのよい部屋のテーブルを挟んで、スタッフと利用者が話している様子" width="1536" height="1024" loading="lazy" decoding="async">
             </picture>
             <a class="recruit-visual-note" href="#contact" data-category="職場見学について（採用）">職場見学を申し込む <span aria-hidden="true">→</span></a>
           </div>
@@ -2547,7 +2530,7 @@
             <div class="job-photo">
               <picture>
                 <source type="image/webp" srcset="recruit-part.webp">
-                <img src="recruit-part.jpg" alt="マンションの入口前で、スタッフと利用者が短く立ち話をしている様子" width="1536" height="1024" loading="lazy">
+                <img src="recruit-part.jpg" alt="マンションの入口前で、スタッフと利用者が短く立ち話をしている様子" width="1536" height="1024" loading="lazy" decoding="async">
               </picture>
             </div>
             <h3>ライフスタイルに合わせて無理なく働く</h3>
@@ -2612,7 +2595,7 @@
             <a class="map-link" href="https://maps.google.com/?q=%E5%A4%A7%E9%98%AA%E5%B8%82%E4%BD%8F%E4%B9%8B%E6%B1%9F%E5%8C%BA%E5%BE%A1%E5%B4%8E5-14-11" target="_blank" rel="noopener noreferrer">Googleマップで開く</a>
           </div>
           <div class="access-card map-card">
-            <iframe title="サポートセンターわかくさの地図" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.8928472533403!2d135.4775376757404!3d34.606870972953146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000dd0373eebcb9%3A0xb0f45ebbef20fdb7!2z44CSNTU5LTAwMTMg5aSn6Ziq5bqc5aSn6Ziq5biC5L2P5LmL5rGf5Yy65b6h5bSO77yV5LiB55uu77yR77yU4oiS77yR77yRIOOCr-ODrOOCu-ODs-ODiOODnuODs-OCt-ODp-ODsyBiMTA4!5e0!3m2!1sja!2sjp!4v1763534377496!5m2!1sja!2sjp" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe title="サポートセンターわかくさの地図" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.8928472533403!2d135.4775376757404!3d34.606870972953146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000dd0373eebcb9%3A0xb0f45ebbef20fdb7!2z44CSNTU5LTAwMTMg5aSn6Ziq5bqc5aSn6Ziq5biC5L2P5LmL5rGf5Yy65b6h5bSO77yV5LiB55uu77yR77yU4oiS77yR77yRIOOCr-ODrOOCu-ODs-ODiOODnuODs-OCt-ODp-ODsyBiMTA4!5e0!3m2!1sja!2sjp!4v1763534377496!5m2!1sja!2sjp" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
           </div>
         </div>
       </div>
@@ -2675,7 +2658,7 @@
             </div>
             <div class="form-field">
               <label for="message">お問い合わせ内容<span class="required-mark" aria-hidden="true">必須</span></label>
-              <textarea id="message" name="message" placeholder="ご質問・ご相談内容をご記入ください" required></textarea>
+              <textarea id="message" name="message" maxlength="2000" placeholder="ご質問・ご相談内容をご記入ください" required></textarea>
             </div>
             <label class="form-consent">
               <input id="consent" name="consent" type="checkbox" value="同意する" required>
@@ -2861,9 +2844,7 @@
             window.scrollTo({ top: 0, behavior: behavior });
           }
         };
-        [window, document.documentElement, document.body].forEach(function (target) {
-          if (target) target.addEventListener('scroll', updateTopButton, { passive: true });
-        });
+        window.addEventListener('scroll', updateTopButton, { passive: true });
         topButton.addEventListener('click', goTop);
         updateTopButton();
       }
@@ -2878,10 +2859,26 @@
     "url": "https://wakakusa-care.com/",
     "email": "wakakusa2002@gmail.com",
     "telephone": "+81-6-6681-1211",
+    "@id": "https://wakakusa-care.com/#business",
+    "description": "大阪市住之江区で、重度訪問介護・居宅介護・行動援護・移動支援・日中一時支援を提供しています。",
+    "image": "https://wakakusa-care.com/hero.jpg",
+    "faxNumber": "+81-6-6681-1246",
+    "foundingDate": "2002",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "株式会社わかくさ"
+    },
     "openingHours": "Mo-Fr 10:00-17:00",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "10:00",
+      "closes": "17:00"
+    },
     "address": {
       "@type": "PostalAddress",
       "postalCode": "559-0013",
+      "addressRegion": "大阪府",
       "addressLocality": "大阪市住之江区",
       "streetAddress": "御崎5-14-11 クレセントマンションB108",
       "addressCountry": "JP"
