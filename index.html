@@ -39,6 +39,7 @@
       --coral: #9a4034;
       --coral-hover: #7f3329;
       --line: #dce6dc;
+      --line-control: #6b7c72;
       --white: #ffffff;
       --focus: #28543b;
       --shadow-sm: 0 12px 30px rgba(23, 61, 42, .08);
@@ -64,7 +65,6 @@
     body {
       min-width: 320px;
       margin: 0;
-      overflow-x: hidden;
       padding-bottom: var(--bar-space);
       background: var(--paper);
       color: var(--ink);
@@ -107,6 +107,17 @@
     textarea:focus-visible {
       outline: 3px solid var(--focus);
       outline-offset: 3px;
+    }
+
+    /* 濃緑の面では --focus(#28543b) が背景に埋もれるため、リング色を切り替える */
+    .topbar,
+    .quick-actions,
+    .service-note,
+    .recruit-section,
+    .contact-intro,
+    .site-footer,
+    .mobile-action-bar {
+      --focus: #f3b75f;
     }
 
     .skip-link {
@@ -165,6 +176,7 @@
 
     .header-inner {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       min-height: 76px;
@@ -172,6 +184,7 @@
     }
 
     .brand {
+      min-width: 0;
       display: inline-flex;
       align-items: center;
       min-width: 0;
@@ -201,7 +214,6 @@
     .brand-copy strong {
       font-size: .98rem;
       letter-spacing: .06em;
-      white-space: nowrap;
     }
 
     .brand-copy small {
@@ -260,7 +272,7 @@
       line-height: 1.25;
     }
 
-    .header-contact span {
+    .header-contact a span {
       display: block;
       color: var(--muted);
       font-size: .65rem;
@@ -372,7 +384,7 @@
       width: 44px;
       height: 44px;
       padding: 0;
-      border: 1px solid var(--line);
+      border: 1px solid var(--line-control);
       border-radius: 50%;
       background: var(--white);
       color: var(--leaf-dark);
@@ -414,7 +426,7 @@
 
     .hero {
       position: relative;
-      overflow: visible;
+      overflow: clip;
       padding: clamp(52px, 7vw, 96px) 0 78px;
       background:
         radial-gradient(circle at 7% 10%, rgba(213, 232, 202, .72), transparent 24%),
@@ -553,10 +565,13 @@
       z-index: 2;
       display: grid;
       width: 86px;
+      min-width: min-content;
       height: 86px;
+      min-height: min-content;
+      padding: 10px;
       place-items: center;
       border: 1px solid rgba(255, 255, 255, .8);
-      border-radius: 50%;
+      border-radius: 999px;
       background: var(--sun);
       color: var(--leaf-deep);
       font-size: .72rem;
@@ -572,6 +587,8 @@
       bottom: 16px;
       z-index: 2;
       width: min(245px, 70%);
+      max-height: calc(100% - 32px);
+      overflow: auto;
       padding: 16px 18px;
       border: 1px solid rgba(255, 255, 255, .8);
       border-radius: 16px;
@@ -824,7 +841,7 @@
       font-size: .95rem;
     }
 
-    .service-note span {
+    .service-note > span > span {
       display: block;
       margin-top: 2px;
       color: rgba(255, 255, 255, .72);
@@ -1005,6 +1022,8 @@
     }
 
     .recruit-visual img {
+      height: auto;
+      object-position: center 30%;
       width: 100%;
       aspect-ratio: 1.2;
       object-fit: cover;
@@ -1278,12 +1297,13 @@
 
     .info-item {
       display: grid;
-      grid-template-columns: 31px 1fr;
+      grid-template-columns: minmax(2.6em, auto) 1fr;
       gap: 11px;
       margin: 0;
     }
 
     .info-item dt {
+      white-space: nowrap;
       color: var(--coral);
       font-size: .82rem;
       font-weight: 900;
@@ -1291,6 +1311,7 @@
 
     .info-item dd {
       margin: 0;
+      overflow-wrap: anywhere;
       color: var(--ink-soft);
       font-size: .81rem;
     }
@@ -1455,7 +1476,7 @@
     .form-field select,
     .form-field textarea {
       width: 100%;
-      border: 1px solid var(--line);
+      border: 1px solid var(--line-control);
       border-radius: 11px;
       background: #fcfdf9;
       color: var(--ink);
@@ -1769,7 +1790,7 @@
       }
 
       :root {
-        --bar-space: calc(76px + env(safe-area-inset-bottom));
+        --bar-space: calc(3.9em + env(safe-area-inset-bottom));
         --radius-lg: 20px;
       }
 
@@ -2099,14 +2120,14 @@
         display: block;
       }
 
-      .footer-bottom span {
+      .footer-bottom > span {
         display: block;
         margin-top: 6px;
       }
 
       .back-to-top {
         right: 16px;
-        bottom: calc(78px + env(safe-area-inset-bottom));
+        bottom: calc(var(--bar-space) + 8px);
         width: 44px;
         height: 44px;
       }
@@ -2129,12 +2150,13 @@
 
       .mobile-action-bar a {
         display: flex;
+        flex-wrap: wrap;
         min-width: 0;
         min-height: 44px;
         align-items: center;
         justify-content: center;
         gap: 4px;
-        padding: 0 6px;
+        padding: 6px;
         border-radius: 10px;
         font-size: .72rem;
         font-weight: 900;
@@ -2734,6 +2756,14 @@
           if (button) {
             button.disabled = true;
             button.textContent = '送信しています…';
+          }
+        });
+        window.addEventListener('pageshow', function (event) {
+          if (!event.persisted) return;
+          var button = form.querySelector('.form-submit');
+          if (button) {
+            button.disabled = false;
+            button.textContent = '送信する';
           }
         });
         form.addEventListener('focusin', function (event) {
