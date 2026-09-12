@@ -2116,6 +2116,9 @@
 
       .volunteer-row .btn-text {
         justify-self: start;
+        /* nowrap のままだと、文字サイズを大きくしたときに 1fr のトラックが
+           リンクの幅まで広がり、ページごと横に溢れる（.footer-cta と同じ対処） */
+        white-space: normal;
       }
 
       .about-stats {
