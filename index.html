@@ -81,6 +81,12 @@
       --shadow-sm: 0 12px 30px rgb(var(--leaf-deep-rgb) / .08);
       --shadow-lg: 0 26px 70px rgb(var(--leaf-deep-rgb) / .14);
 
+      /* 浮きの影の「形」。色は使用側で足す。
+         例: box-shadow: var(--shadow-raise) rgb(var(--leaf-dark-rgb) / .2);
+         色までトークンに含めて入れ子にすると、子要素で色を差し替えても効かないため形だけを持たせている */
+      --shadow-raise: 0 9px 20px;
+      --shadow-raise-hover: 0 14px 28px;
+
       /* 角丸（7段）。--radius-2xl だけ 640px以下で 20px に下がる。
          これ以外の角丸（円の 50%、下線の 2px、ロゴと採用画像の非対称な角）は
          形そのものが目的なので、意図的に段へ寄せていない */
@@ -253,7 +259,7 @@
       font-family: var(--font-serif);
       font-size: var(--fs-2xl);
       font-weight: 800;
-      box-shadow: 0 8px 18px rgb(var(--leaf-dark-rgb) / .2);
+      box-shadow: var(--shadow-raise) rgb(var(--leaf-dark-rgb) / .2);
     }
 
     .brand-copy {
@@ -383,7 +389,7 @@
     .btn-primary {
       background: var(--leaf-dark);
       color: var(--white);
-      box-shadow: 0 10px 22px rgb(var(--leaf-dark-rgb) / .18);
+      box-shadow: var(--shadow-raise) rgb(var(--leaf-dark-rgb) / .2);
     }
 
     .header-cta {
@@ -395,7 +401,7 @@
     .header-cta:hover,
     .btn-primary:hover {
       background: var(--leaf-deep);
-      box-shadow: 0 14px 28px rgb(var(--leaf-dark-rgb) / .24);
+      box-shadow: var(--shadow-raise-hover) rgb(var(--leaf-dark-rgb) / .24);
       transform: translateY(-2px);
     }
 
@@ -1605,7 +1611,7 @@
       cursor: pointer;
       font-size: var(--fs-md);
       font-weight: 900;
-      box-shadow: 0 9px 20px rgb(var(--coral-rgb) / .22);
+      box-shadow: var(--shadow-raise) rgb(var(--coral-rgb) / .2);
       transition: transform .25s ease, background .25s ease;
     }
 
