@@ -1381,6 +1381,18 @@
       font-size: var(--fs-sm);
     }
 
+    /* 事業所番号だけはラベルを上に置く。値が3行あり、他の行と同じ2列に入れると
+       ラベル列だけ広がって値の左端が揃わず、サービス名も語中で改行される */
+    .info-item-stack {
+      grid-template-columns: 1fr;
+      gap: 7px;
+    }
+
+    .info-item-stack dd {
+      overflow-wrap: normal;
+      line-height: 1.75;
+    }
+
     .info-item dd a {
       color: var(--leaf-dark);
       font-weight: 800;
@@ -2657,6 +2669,7 @@
               <div class="info-item"><dt>メール</dt><dd><a href="mailto:wakakusa2002@gmail.com">wakakusa2002@gmail.com</a></dd></div>
               <div class="info-item"><dt>受付</dt><dd>平日 10:00〜17:00</dd></div>
               <div class="info-item"><dt>エリア</dt><dd>大阪市全域</dd></div>
+              <div class="info-item info-item-stack"><dt>事業所番号</dt><dd>2715900029（重度訪問介護・居宅介護・行動援護）<br>2765900010（移動支援）<br>2775901412（訪問介護・介護予防訪問介護）</dd></div>
             </dl>
             <p class="access-note">サービスの対応エリアは大阪市全域です。事業所へのアクセス方法など、詳しくはお問い合わせください。</p>
             <a class="map-link" href="https://maps.google.com/?q=%E5%A4%A7%E9%98%AA%E5%B8%82%E4%BD%8F%E4%B9%8B%E6%B1%9F%E5%8C%BA%E5%BE%A1%E5%B4%8E5-14-11" target="_blank" rel="noopener noreferrer">Googleマップで開く</a>
